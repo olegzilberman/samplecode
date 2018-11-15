@@ -1,0 +1,1052 @@
+--------- beginning of main
+11-04 21:02:54.865  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+--------- beginning of system
+11-04 21:02:54.881  2729  3051 D AlarmManager: set alarm to RTC 168251643
+11-04 21:02:54.881  2729  3051 D DataShapingService: Alarm manager openLteDataUpLinkGate: false
+11-04 21:02:54.881  2729  3051 V AlarmManager: openLteGateSuccess = false
+11-04 21:02:54.882  2729  3051 D AlarmManager: wakeup alarm = Alarm{df1104d type 2 when 168250837 android}; listener package = WifiConnectivityManager Schedule Periodic Scan TimerneedGrouping = false
+11-04 21:02:54.884  2729  3064 D WifiConnectivityManager: periodicScanTimerHandler
+11-04 21:02:54.884  2729  3064 D WifiScanner: startScan, pid:2729, tid:3064, uid:1000
+11-04 21:02:54.891  2729  3066 D WifiScanningService: addSingleScanRequest: ClientInfo[uid=1000,android.os.Messenger@da87dda],Id=228,WorkSource{1010}, ScanSettings {  band:7 period:0 reportEvents:3 numBssidsPerScan:0 maxScansToCache:0 channels:[  ]  maxPeriodInMs:0 stepCount:0 } 
+11-04 21:02:54.892  2729  3066 D WifiHAL : WifiRequest::create vendor command to iface 35, vendor_id=0x1a11, subcmd=0x0001, res=0
+11-04 21:02:54.892  2729  3066 I WifiHAL : In GetChannelList::mBand=1
+11-04 21:02:54.893  2729  3066 I WifiHAL : Get channel list with 11 channels
+11-04 21:02:54.893  2729  3066 D WifiHAL : mChannels[0]=2412 mChannels[1]=2417
+11-04 21:02:54.893  2729  3066 D WifiHAL : WifiRequest::create vendor command to iface 35, vendor_id=0x1a11, subcmd=0x0001, res=0
+11-04 21:02:54.893  2729  3066 I WifiHAL : In GetChannelList::mBand=2
+11-04 21:02:54.893  2729  3066 I WifiHAL : Get channel list with 9 channels
+11-04 21:02:54.893  2729  3066 D WifiHAL : mChannels[0]=5180 mChannels[1]=5200
+11-04 21:02:54.894  2729  3066 D WifiHAL : WifiRequest::create vendor command to iface 35, vendor_id=0x1a11, subcmd=0x0001, res=0
+11-04 21:02:54.894  2729  3066 I WifiHAL : In GetChannelList::mBand=4
+11-04 21:02:54.894  2729  3066 I WifiHAL : Get channel list with 16 channels
+11-04 21:02:54.894  2729  3066 D WifiHAL : mChannels[0]=5260 mChannels[1]=5280
+11-04 21:02:54.896  2729  3066 D WifiScanningService: tryToStartNewScan startSingleScan: base_period_ms0 num_buckets= 1
+11-04 21:02:54.897  2729  3066 D SupplicantWifiScannerImpl: Force stopping Pno scan
+11-04 21:02:54.897  2729  3066 D SupplicantWifiScannerImpl: PNO state is already false
+11-04 21:02:54.897  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 SCAN TYPE=ONLY
+11-04 21:02:54.901  2729  3138 D WifiHW  : [1] get event: IFNAME=wlan0 <3>CTRL-EVENT-SCAN-STARTED 
+11-04 21:02:54.901  2729  3138 D WifiHW  : [2] get event: IFNAME=wlan0 CTRL-EVENT-SCAN-STARTED 
+11-04 21:02:54.904  2729  3138 D WifiMonitor: Dispatching event to interface: wlan0
+11-04 21:02:54.904  2729  3138 D WifiHW  : enter -->wifi_wait_on_socket buflen=2048
+11-04 21:02:54.910  2729  3064 I WifiConnectivityManager: schedulePeriodicScanTimer: 160000
+11-04 21:02:54.910  2729  3051 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="*alarm*", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{1000}
+11-04 21:02:54.911  2729  3064 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:54.911  2729  3064 V AlarmManager: APP set with listener(WifiConnectivityManager Schedule Periodic Scan Timer) : type=2 triggerAtTime=168410866 win=-1 tElapsed=168410866 maxElapsed=168530865 interval=0 flags=0x8
+11-04 21:02:54.912  2729  3064 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="*alarm*", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{1000}
+11-04 21:02:54.913  2729  3064 D WifiConnectivityManager: SingleScanListener onSuccess
+11-04 21:02:54.915  2729  3066 D WifiHW  : leave --> reply=OK
+11-04 21:02:54.915  2729  3066 D WifiHW  : ûz
+11-04 21:02:54.925  2729  3066 D SupplicantWifiScannerImpl: Starting wifi scan for freqs=null, background=false, single=true
+11-04 21:02:54.925  2729  3066 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:54.926  2729  3066 V AlarmManager: APP set with listener(SupplicantWifiScannerImpl Scan Timeout) : type=2 triggerAtTime=168265882 win=-1 tElapsed=168265882 maxElapsed=168277132 interval=0 flags=0x8
+11-04 21:02:55.345  2729  2780 D BluetoothManagerService: Message: 401
+11-04 21:02:55.346  2729  2780 V gxl     : aeonHandleService isScreenOn=true, return
+11-04 21:02:55.687  2729  3051 D AlarmManager: set alarm to RTC 168265882
+11-04 21:02:55.687  2729  3051 D AlarmManager: set alarm to RTC 168255956
+11-04 21:02:55.687  2729  3051 D DataShapingService: Alarm manager openLteDataUpLinkGate: false
+11-04 21:02:55.687  2729  3051 V AlarmManager: openLteGateSuccess = false
+11-04 21:02:55.688  2729  3051 D AlarmManager: wakeup alarm = Alarm{a441813 type 2 when 168251643 android}; listener package = *job.delay*needGrouping = false
+11-04 21:02:55.693  2729  2729 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.696  2729  3051 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="*alarm*", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{10021}
+11-04 21:02:55.700  2729  2729 V AlarmManager: APP set with listener(*job.delay*) : type=2 triggerAtTime=168367748 win=-1 tElapsed=168367748 maxElapsed=168454822 interval=0 flags=0x0
+11-04 21:02:55.701  2729  2729 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="*alarm*", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{10021}
+11-04 21:02:55.711  2729  2729 V gxl     : aeonHandleService isScreenOn=true, return
+11-04 21:02:55.718 20130 20130 V ActivityThread: SVC-Creating service CreateServiceData{token=android.os.BinderProxy@2ff66bb className=com.google.android.finsky.scheduler.JobSchedulerEngine$PhoneskyJobSchedulerJobService packageName=com.android.vending intent=null}
+11-04 21:02:55.729  2729  2729 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="*job*/com.android.vending/com.google.android.finsky.scheduler.JobSchedulerEngine$PhoneskyJobSchedulerJobService", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{10021}
+11-04 21:02:55.732 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.JobSchedulerEngine$PhoneskyJobSchedulerJobService.onStartJob(8): onJobSchedulerWakeup with jobId 9000
+11-04 21:02:55.742  2729  3870 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.742  2729  3870 V AlarmManager: APP set(PendingIntent{74e226f: PendingIntentRecord{823e680 com.android.vending startService}}) : type=2 triggerAtTime=211451689 win=-1 tElapsed=211451689 maxElapsed=243851681 interval=0 flags=0x0
+11-04 21:02:55.744  2729  3870 D AlarmManager: remove(operation) changed bounds; rebatching operation = PendingIntent{74e226f: PendingIntentRecord{823e680 com.android.vending startService}}
+11-04 21:02:55.746 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ae.a(41): Scheduling fallback in 43199987 (absolute: 211451689)
+11-04 21:02:55.756  2729 22189 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.756  2729 22189 V AlarmManager: APP set(PendingIntent{b9cab7c: PendingIntentRecord{3ea0fe com.android.vending startService}}) : type=2 triggerAtTime=233051703 win=-1 tElapsed=233051703 maxElapsed=281651696 interval=0 flags=0x0
+11-04 21:02:55.757  2729 22189 D AlarmManager: remove(operation) changed bounds; rebatching operation = PendingIntent{b9cab7c: PendingIntentRecord{3ea0fe com.android.vending startService}}
+11-04 21:02:55.759 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ae.a(41): Scheduling fallback in 64799988 (absolute: 233051703)
+11-04 21:02:55.766 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.am.handleMessage(16): DeviceState: DeviceState{currentTime=1541394175763, isCharging=true, isIdle=false, netAny=true, netNotRoaming=true, netUnmetered=true}
+11-04 21:02:55.772 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.bp.a(81): Jobs in database: 1-1337 12-1 26-1414141414 
+11-04 21:02:55.775 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ah.a(59): Running job: 12-1
+11-04 21:02:55.776 20130 20130 I Finsky  : [1] com.google.android.finsky.contentsync.ContentSyncJob.a(30): ContentSyncJob started
+11-04 21:02:55.779 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ah.a(105): RunningQueue size: 1, PendingQueue size: 0
+11-04 21:02:55.779 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ah.a(116): Running queue: 12-1 
+11-04 21:02:55.783 20130 20199 I Finsky  : [522] com.google.android.finsky.n.c.a(21): Completed 0 account content syncs with 0 successful.
+11-04 21:02:55.785 20130 20130 I Finsky  : [1] com.google.android.finsky.contentsync.ContentSyncJob.a(28): Installation state replication succeeded.
+11-04 21:02:55.785 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.bm.b(8): jobFinished: 12-1. TimeElapsed: 9ms
+11-04 21:02:55.787 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ah.a(139): Job 12-1 finished
+11-04 21:02:55.788 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.ah.a(105): RunningQueue size: 0, PendingQueue size: 0
+11-04 21:02:55.790 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.am.handleMessage(42): Executor finished
+11-04 21:02:55.798  2729  2729 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="*job*/com.android.vending/com.google.android.finsky.scheduler.JobSchedulerEngine$PhoneskyJobSchedulerJobService", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{10021}
+11-04 21:02:55.799  2729  2729 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.800  2729  2729 V AlarmManager: APP set with listener(*job.delay*) : type=2 triggerAtTime=168367748 win=-1 tElapsed=168367748 maxElapsed=168454742 interval=0 flags=0x0
+11-04 21:02:55.800  2729  2729 D AlarmManager: remove(operation) changed bounds; rebatching operation = null
+11-04 21:02:55.801  2729  2729 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.801  2729  2729 V AlarmManager: APP set with listener(*job.deadline*) : type=2 triggerAtTime=168367748 win=-1 tElapsed=168367748 maxElapsed=168454741 interval=0 flags=0x0
+11-04 21:02:55.801  2729  2729 D AlarmManager: remove(operation) changed bounds; rebatching operation = null
+11-04 21:02:55.801 20130 20130 V ActivityThread: SVC-Destroying service com.google.android.finsky.scheduler.JobSchedulerEngine$PhoneskyJobSchedulerJobService@e05a984
+11-04 21:02:55.803   314   314 I wmt_launcher: fw log ctrl flag has been set
+11-04 21:02:55.803   314   314 I wmt_launcher: fw dynamic ctrl flag has been set
+11-04 21:02:55.808  2729 24252 D IpReachabilityMonitor: RtNetlinkNeighborMessage{ nlmsghdr{StructNlMsgHdr{ nlmsg_len{76}, nlmsg_type{28(RTM_NEWNEIGH)}, nlmsg_flags{0())}, nlmsg_seq{0}, nlmsg_pid{0} }}, ndmsg{StructNdMsg{ family{AF_INET}, ifindex{35}, state{4 (NUD_STALE)}, flags{0 ()}, type{1} }}, destination{192.168.1.1} linklayeraddr{AC9E17AB3470} probes{1} cacheinfo{NdaCacheInfo{ ndm_used{9430}, ndm_confirmed{15880}, ndm_updated{0}, ndm_refcnt{1} }} }
+11-04 21:02:55.810 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.bp.a(81): Jobs in database: 1-1337 26-1414141414 
+11-04 21:02:55.814 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.l.a(70): ConstraintMapping: 1-1337,  -> L: 32640216ms, D: 119040216ms, C: false, I: false, N: 1
+11-04 21:02:55.817 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.l.a(70): ConstraintMapping: 26-1414141414,  -> L: 7119758ms, D: 8019758ms, C: false, I: false, N: 0
+11-04 21:02:55.819 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.JobSchedulerEngine.a(108): Cancelling existing job with id: 9003
+11-04 21:02:55.819  2729  3856 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.819  2729  3856 V AlarmManager: APP set with listener(*job.delay*) : type=2 triggerAtTime=168367748 win=-1 tElapsed=168367748 maxElapsed=168454727 interval=0 flags=0x0
+11-04 21:02:55.820  2729  3856 D AlarmManager: remove(operation) changed bounds; rebatching operation = null
+11-04 21:02:55.821  2729  3856 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:02:55.821  2729  3856 V AlarmManager: APP set with listener(*job.deadline*) : type=2 triggerAtTime=168367748 win=-1 tElapsed=168367748 maxElapsed=168454726 interval=0 flags=0x0
+11-04 21:02:55.821  2729  3856 D AlarmManager: remove(operation) changed bounds; rebatching operation = null
+11-04 21:02:55.823 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.JobSchedulerEngine.a(47): Scheduling job Id: 9001, L: 32640216, D: 119040216, C: false, I: false, N: 1
+11-04 21:02:55.826 20130 20130 I Finsky  : [1] com.google.android.finsky.scheduler.JobSchedulerEngine.a(47): Scheduling job Id: 9002, L: 7119758, D: 8019758, C: false, I: false, N: 0
+11-04 21:02:55.858  2241  2241 I thermal_repeater: select timeout
+11-04 21:02:55.866  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:55.869  2234  2385 D AALLightSensor: newLux = 145, [144, 142] -> 144
+11-04 21:02:55.946  2413 24264 I MAL-RDS :  (rum_ws_listener_timeout_,  426) [RDS-I][RDS][RUM][rum_ws_listener_timeout_hndler] rum_check_ctx_ptr<0xe7996018, 0xe7996018>, Send Event: 9909
+11-04 21:02:55.947  2413 24264 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9909 to 914
+11-04 21:02:55.947  2413  2505 I MAL-RDS :  (rds_rum_rum_wsl_timer_ti, 1072) [RDS-I][RUM][rds_rum_rum_wsl_timer_timeout_req][RDS] rds_rum_rum_wsl_timer_timeout_req: prcontext->i4wifi_rssi = -73, prcontext->i4wifi_snr = 9999
+11-04 21:02:55.952  2413  2505 I MAL-RDS :  (  rum_update_wifi_status, 1055) [RDS-I][RUM][rum_update_wifi_status][RDS] get rssi<-73> snr<9999> plr<0>
+11-04 21:02:55.953  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9005 to 906
+11-04 21:02:55.953  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9005 to 907
+11-04 21:02:55.957  2413  2505 I MAL-RDS :  (         rum_get_netstat,  975) [RDS-I][RUM][rum_get_netstat] netstat <thrghpt, pkterrt>, wifi <276, 0%>, mobile <0, 0%>
+11-04 21:02:55.957  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9706 to 906
+11-04 21:02:55.957  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9706 to 907
+11-04 21:02:55.958  2413  2511 I MAL-RDS :  (  rds_ru_wifi_status_ind, 1864) [RDS-I][RU][EVENT_RUM_RU_WIFI_STATUS_REQ] fgwifi_en:1(no use) i4wifirssi:0xffffffb7 i4wifisnr:0x270f sim_id:0
+11-04 21:02:55.958  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <0>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <1>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <2>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <3>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <4>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <5>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.960  2413  2511 I MAL-RDS :  (  rds_ru_ims_vops_update, 7401) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled(opid<0>) Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+11-04 21:02:55.961  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7765) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<1>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-73>, i4wifisnr<9999>, i4ltersrp<-141>, i4ltersrq<0>, u4active_ran<1>, i4lterssnr<-50>, i43grscp<-141>, i43gecno<-24>, i42grssi<-141>, u4sig_reg_status<0>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>, ltecsr_ind<0>, ||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0>, IPME<0>, sim<0>
+11-04 21:02:55.961  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7782) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(255,255) New:(254,254)/(255,255) , sim<0>
+11-04 21:02:55.961  2413  2517 I MAL-RDS :  (  rds_ru_wifi_status_ind, 1864) [RDS-I][RU][EVENT_RUM_RU_WIFI_STATUS_REQ] fgwifi_en:1(no use) i4wifirssi:0xffffffb7 i4wifisnr:0x270f sim_id:1
+11-04 21:02:55.962  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <0>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.962  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <1>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.962  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <2>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <3>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <4>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <5>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:55.963  2413  2517 I MAL-RDS :  (  rds_ru_ims_vops_update, 7401) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled(opid<0>) Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+11-04 21:02:55.964  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7765) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<1>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-73>, i4wifisnr<9999>, i4ltersrp<-71>, i4ltersrq<0>, u4active_ran<1>, i4lterssnr<-50>, i43grscp<-71>, i43gecno<-3>, i42grssi<-141>, u4sig_reg_status<2>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>, ltecsr_ind<0>, ||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0>, IPME<0>, sim<1>
+11-04 21:02:55.965  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7782) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(255,255) New:(254,254)/(255,255) , sim<1>
+11-04 21:02:55.965  2413  2517 W MAL-RDS :  (         ru_check_imsrat, 7652) [RDS-W][RU][ru_check_imsrat] MDmngr(1) or Epdgs(0) is not ready
+11-04 21:02:56.142  3177  3177 D NetworkController.WifiSignalController: Change in state from: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=false,activityOut=false,rssi=-77,lastModified=11-04 09:02:54,ssid="ASUS"
+11-04 21:02:56.142  3177  3177 D NetworkController.WifiSignalController: 	to: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=false,rssi=-77,lastModified=11-04 09:02:54,ssid="ASUS"
+11-04 21:02:56.176   324   500 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) queueBuffer: fps=0.49 dur=2024.13 max=2024.13 min=2024.13
+11-04 21:02:56.182   324   324 I DisplayDevice: [Built-in Screen (type:0)] fps:0.495250,dur:2019.18,max:2019.18,min:2019.18
+11-04 21:02:56.237  4025  4025 V ActivityThread: SVC-Destroying service com.google.android.gms.icing.service.AppIndexingService@c7c169a
+11-04 21:02:56.469  1992  1999 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:56.714  2729  2788 D AutomaticBrightnessController: updateAmbientLux: mAmbientLuxValid=true, AAL=true
+11-04 21:02:56.715  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: [-10000, 100]: lux=145.0, weight=5.1005E7
+11-04 21:02:56.715  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: totalWeight=5.1005E7, newAmbientLux=145.0
+11-04 21:02:56.715  2729  2788 D AutomaticBrightnessController: updateAmbientLux: ambientLux=145.0, timeToBrighten=2500, timeToDarken=3000, current=145.0
+11-04 21:02:56.715  2729  2788 D AutomaticBrightnessController: updateAmbientLux: Scheduling ambient lux update for 5320124553201245 (in 2498 ms)
+11-04 21:02:56.862  2729  3892 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="CastSocketMultiplexer_WakeLock", packageName=com.google.android.gms, ownerUid=10013, ownerPid=4025, workSource=WorkSource{10013 com.google.android.gms}
+11-04 21:02:56.866  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:56.875  2729  2744 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="CastSocketMultiplexer_WakeLock", packageName=com.google.android.gms, ownerUid=10013, ownerPid=4025, workSource=WorkSource{10013 com.google.android.gms}
+11-04 21:02:56.885  2729  3470 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="CastDeviceController", packageName=com.google.android.gms, ownerUid=10013, ownerPid=4025, workSource=WorkSource{10013 com.google.android.gms}
+11-04 21:02:56.891  2729  2751 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="CastDeviceController", packageName=com.google.android.gms, ownerUid=10013, ownerPid=4025, workSource=WorkSource{10013 com.google.android.gms}
+11-04 21:02:56.894  2729 10182 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="CastSocketMultiplexer_WakeLock", packageName=com.google.android.gms, ownerUid=10013, ownerPid=4025, workSource=WorkSource{10013 com.google.android.gms}
+11-04 21:02:56.897  2729 28272 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="CastSocketMultiplexer_WakeLock", packageName=com.google.android.gms, ownerUid=10013, ownerPid=4025, workSource=WorkSource{10013 com.google.android.gms}
+11-04 21:02:57.161  3177  3177 D NetworkController.WifiSignalController: Change in state from: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=false,rssi=-77,lastModified=11-04 09:02:56,ssid="ASUS"
+11-04 21:02:57.161  3177  3177 D NetworkController.WifiSignalController: 	to: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=true,rssi=-77,lastModified=11-04 09:02:56,ssid="ASUS"
+11-04 21:02:57.194   324   500 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) queueBuffer: fps=0.98 dur=1018.04 max=1018.04 min=1018.04
+11-04 21:02:57.200   324   324 I DisplayDevice: [Built-in Screen (type:0)] fps:0.982263,dur:1018.06,max:1018.06,min:1018.06
+11-04 21:02:57.354  2729  3064 D WifiStateMachine:  ConnectedState !CMD_RSSI_POLL  rt=53199381/168253305 44 0 "ASUS" ac:9e:17:ab:34:78 rssi=-73 f=5805 sc=56 link=87 tx=4,4, 0,0, 0,0  rx=5,3 bcn=0 [on:0 tx:0 rx:0 period:3005] from screen [on:0 period:-499081911] gl hn rssi=-68 ag=0 ticks 1,10,16 ls-=0 [56,56,56,56,56] brc=0 lrc=0 offload-stopped
+11-04 21:02:57.363  2729  3064 D WifiStateMachine:  L2ConnectedState !CMD_RSSI_POLL  rt=53199386/168253311 44 0 "ASUS" ac:9e:17:ab:34:78 rssi=-73 f=5805 sc=56 link=87 tx=4,4, 0,0, 0,0  rx=5,3 bcn=0 [on:0 tx:0 rx:0 period:8] from screen [on:0 period:-499081903] gl hn rssi=-68 ag=0 ticks 1,10,16 ls-=0 [56,56,56,56,56] brc=0 lrc=0 offload-stopped
+11-04 21:02:57.363  2729  3064 D WifiStateMachine:  get link layer stats 0
+11-04 21:02:57.365  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 SIGNAL_POLL
+11-04 21:02:57.373  2729  3064 D WifiHW  : leave --> reply=RSSI=-73
+11-04 21:02:57.373  2729  3064 D WifiHW  : LINKSPEED=87
+11-04 21:02:57.373  2729  3064 D WifiHW  : NOISE=9999
+11-04 21:02:57.373  2729  3064 D WifiHW  : FREQUENCY=5805
+11-04 21:02:57.373  2729  3064 D WifiHW  : `Ap
+11-04 21:02:57.374  2729  3064 D WifiStateMachine: fetchRssiLinkSpeedAndFrequencyNative rssi=-73 linkspeed=87 freq=5805
+11-04 21:02:57.374  2729  3064 D WifiStateMachine: mLastSignalLevel:2, newSignalLevel:2
+11-04 21:02:57.374  2729  3064 D WifiConfigManager: updateConfiguration freq=5805 BSSID=ac:9e:17:ab:34:78 RSSI=-73 "ASUS"WPA_PSK
+11-04 21:02:57.377  2729  3064 D WifiStateMachine: calculateWifiScore freq=5805 speed=87 score=56 -> txbadrate=0,00 txgoodrate=3,19 txretriesrate=0,00 rxrate=4,14 userTriggerdPenalty0
+11-04 21:02:57.378  2729  3064 D WifiStateMachine:  good link -> stuck count =0
+11-04 21:02:57.383  2729  3064 D WifiStateMachine:  badRSSI count0 lowRSSI count0 --> score 56
+11-04 21:02:57.804   314   314 I wmt_launcher: fw log ctrl flag has been set
+11-04 21:02:57.804   314   314 I wmt_launcher: fw dynamic ctrl flag has been set
+11-04 21:02:57.862 20130 20157 I Finsky  : [505] com.google.android.finsky.bp.am.run(6): Stats for Executor: NotificationAssistDatabaseManager com.google.android.finsky.bp.an@9f7378d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2]
+11-04 21:02:57.867  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:58.166  3177  3177 D NetworkController.WifiSignalController: Change in state from: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=true,rssi=-77,lastModified=11-04 09:02:57,ssid="ASUS"
+11-04 21:02:58.166  3177  3177 D NetworkController.WifiSignalController: 	to: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=false,rssi=-77,lastModified=11-04 09:02:57,ssid="ASUS"
+11-04 21:02:58.180  2413  2474 I MAL-Daemon:  (      mfi_task_bootstrap,  400) mfi_task_bootstrap(): an event EVENT_ATMNGR_URC(18) incoming from FD 32!!
+11-04 21:02:58.182  2413  2517 I MAL-RDS :  (         rds_ru_urc_hdlr, 2406) [RDS-I][RDS][rds_ru_urc_hdlr] get URC data: +ECSQ: 52,38,1,-275,-22,1,1,2,32767,-1
+11-04 21:02:58.182  2413  2517 I MAL-RDS :  (  rds_ru_3gpp_status_ind, 1920) [RDS-I][RU][EVENT_RU_DM_3GPP_STATUS_IND] i4ltersrp:-69, i4ltersrq:40, i4lterssnr:32767, i43grscp:-69, i43gecno:-5, i42grssi:0, u43gpp_status:0x8, sim_id:1
+11-04 21:02:58.182  2413  2517 E MAL-RDS :  (  rds_ru_3gpp_status_ind, 1965) [RDS-E][RU][EVENT_RU_DM_3GPP_STATUS_IND] Invalid u43gpp_status:0x8 sim:1
+11-04 21:02:58.182  2413  2517 W MAL-RDS :  (  ru_ims_ctrl_send_atcmd, 1479) [RDS-W][RU][ru_ims_ctrl_send_atcmd] MDmngr(1) or Epdgs(0) is not ready
+11-04 21:02:58.183  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <0>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.183  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <1>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.185  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <2>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.185  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <3>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.185  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <4>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.185  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <5>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.186  2413  2517 I MAL-RDS :  (  rds_ru_ims_vops_update, 7401) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled(opid<0>) Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+11-04 21:02:58.199  2729  3873 V gxl     : aeonfilterBroadcast isScreenOn=true, return
+11-04 21:02:58.202  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7765) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<1>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-73>, i4wifisnr<9999>, i4ltersrp<-69>, i4ltersrq<0>, u4active_ran<1>, i4lterssnr<-50>, i43grscp<-69>, i43gecno<-5>, i42grssi<-141>, u4sig_reg_status<2>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>, ltecsr_ind<0>, ||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0>, IPME<0>, sim<1>
+11-04 21:02:58.202  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7782) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(255,255) New:(254,254)/(255,255) , sim<1>
+11-04 21:02:58.202  2413  2517 W MAL-RDS :  (         ru_check_imsrat, 7652) [RDS-W][RU][ru_check_imsrat] MDmngr(1) or Epdgs(0) is not ready
+11-04 21:02:58.210   324   500 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) queueBuffer: fps=0.98 dur=1016.47 max=1016.47 min=1016.47
+11-04 21:02:58.216   324   324 I DisplayDevice: [Built-in Screen (type:0)] fps:0.983717,dur:1016.55,max:1016.55,min:1016.55
+11-04 21:02:58.344 20130 20157 I Finsky  : [505] com.google.android.finsky.bp.am.run(6): Stats for Executor: Db-scheduled_acquisitions.db com.google.android.finsky.bp.an@53dcd42[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+11-04 21:02:58.352  2729  2780 D BluetoothManagerService: Message: 401
+11-04 21:02:58.352  2729  2780 V gxl     : aeonHandleService isScreenOn=true, return
+11-04 21:02:58.471  1992  1999 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:58.868  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:58.946  2413 24264 I MAL-RDS :  (rum_ws_listener_timeout_,  426) [RDS-I][RDS][RUM][rum_ws_listener_timeout_hndler] rum_check_ctx_ptr<0xe7996018, 0xe7996018>, Send Event: 9909
+11-04 21:02:58.947  2413 24264 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9909 to 914
+11-04 21:02:58.947  2413  2505 I MAL-RDS :  (rds_rum_rum_wsl_timer_ti, 1072) [RDS-I][RUM][rds_rum_rum_wsl_timer_timeout_req][RDS] rds_rum_rum_wsl_timer_timeout_req: prcontext->i4wifi_rssi = -73, prcontext->i4wifi_snr = 9999
+11-04 21:02:58.954  2413  2505 I MAL-RDS :  (  rum_update_wifi_status, 1055) [RDS-I][RUM][rum_update_wifi_status][RDS] get rssi<-73> snr<9999> plr<0>
+11-04 21:02:58.954  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9005 to 906
+11-04 21:02:58.955  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9005 to 907
+11-04 21:02:58.958  2413  2511 I MAL-RDS :  (  rds_ru_wifi_status_ind, 1864) [RDS-I][RU][EVENT_RUM_RU_WIFI_STATUS_REQ] fgwifi_en:1(no use) i4wifirssi:0xffffffb7 i4wifisnr:0x270f sim_id:0
+11-04 21:02:58.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <0>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <1>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.959  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <2>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.960  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <3>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.960  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <4>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.960  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <5>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.960  2413  2511 I MAL-RDS :  (  rds_ru_ims_vops_update, 7401) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled(opid<0>) Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+11-04 21:02:58.961  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7765) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<1>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-73>, i4wifisnr<9999>, i4ltersrp<-141>, i4ltersrq<0>, u4active_ran<1>, i4lterssnr<-50>, i43grscp<-141>, i43gecno<-24>, i42grssi<-141>, u4sig_reg_status<0>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>, ltecsr_ind<0>, ||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0>, IPME<0>, sim<0>
+11-04 21:02:58.962  2413  2511 I MAL-RDS :  (          rds_ru_rpl_gen, 7782) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(255,255) New:(254,254)/(255,255) , sim<0>
+11-04 21:02:58.962  2413  2517 I MAL-RDS :  (  rds_ru_wifi_status_ind, 1864) [RDS-I][RU][EVENT_RUM_RU_WIFI_STATUS_REQ] fgwifi_en:1(no use) i4wifirssi:0xffffffb7 i4wifisnr:0x270f sim_id:1
+11-04 21:02:58.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <0>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <1>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <2>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <3>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <4>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.963  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7712) [RDS-I][RU][rds_ru_rpl_gen][RDS][OP0] TYPE : <5>, UI Policy : <3>, RDS Policy : <3>
+11-04 21:02:58.964  2413  2517 I MAL-RDS :  (  rds_ru_ims_vops_update, 7401) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled(opid<0>) Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+11-04 21:02:58.980  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7765) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<1>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-73>, i4wifisnr<9999>, i4ltersrp<-69>, i4ltersrq<0>, u4active_ran<1>, i4lterssnr<-50>, i43grscp<-69>, i43gecno<-5>, i42grssi<-141>, u4sig_reg_status<2>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>, ltecsr_ind<0>, ||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0>, IPME<0>, sim<1>
+11-04 21:02:58.980  2413  2517 I MAL-RDS :  (          rds_ru_rpl_gen, 7782) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(255,255) New:(254,254)/(255,255) , sim<1>
+11-04 21:02:58.980  2413  2517 W MAL-RDS :  (         ru_check_imsrat, 7652) [RDS-W][RU][ru_check_imsrat] MDmngr(1) or Epdgs(0) is not ready
+11-04 21:02:58.983  2413  2505 I MAL-RDS :  (         rum_get_netstat,  975) [RDS-I][RUM][rum_get_netstat] netstat <thrghpt, pkterrt>, wifi <520, 0%>, mobile <0, 0%>
+11-04 21:02:58.983  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9706 to 906
+11-04 21:02:58.984  2413  2505 I MAL-RDS :  (   rum_send_event_entity,   81) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9706 to 907
+11-04 21:02:59.210  3177  3177 D NetworkController.WifiSignalController: Change in state from: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=false,rssi=-77,lastModified=11-04 09:02:58,ssid="ASUS"
+11-04 21:02:59.210  3177  3177 D NetworkController.WifiSignalController: 	to: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=false,activityOut=false,rssi=-77,lastModified=11-04 09:02:58,ssid="ASUS"
+11-04 21:02:59.216  2729  2788 D AutomaticBrightnessController: updateAmbientLux: mAmbientLuxValid=true, AAL=true
+11-04 21:02:59.216  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: [-10000, 100]: lux=145.0, weight=5.1005E7
+11-04 21:02:59.216  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: totalWeight=5.1005E7, newAmbientLux=145.0
+11-04 21:02:59.216  2729  2788 D AutomaticBrightnessController: updateAmbientLux: ambientLux=145.0, timeToBrighten=2500, timeToDarken=3000, current=145.0
+11-04 21:02:59.216  2729  2788 D AutomaticBrightnessController: updateAmbientLux: Scheduling ambient lux update for 5320374753203747 (in 2499 ms)
+11-04 21:02:59.240   324   500 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) queueBuffer: fps=0.97 dur=1029.95 max=1029.95 min=1029.95
+11-04 21:02:59.249   324   324 I DisplayDevice: [Built-in Screen (type:0)] fps:0.968275,dur:1032.76,max:1032.76,min:1032.76
+11-04 21:02:59.333  2248  2248 D wifi2agps: scan result, found 19 APs
+11-04 21:02:59.333  2248  2248 D agps    : [WIFI2AGPS] wifi2agps_scanned
+11-04 21:02:59.335  2237  2328 D agps    : [agps][n][WIFI] wifi_scanned  count=353 timestamp=168255291 num=19
+11-04 21:02:59.344  2729  3138 D WifiHW  : [1] get event: IFNAME=wlan0 <3>CTRL-EVENT-SCAN-RESULTS 
+11-04 21:02:59.345  2729  3138 D WifiHW  : [2] get event: IFNAME=wlan0 CTRL-EVENT-SCAN-RESULTS 
+11-04 21:02:59.347  2729  3138 D WifiMonitor: Dispatching event to interface: wlan0
+11-04 21:02:59.351  2261  2959 I Netd    : Get netlink event, ifname: wlan0 action: 4
+11-04 21:02:59.352  2261  2959 D SocketClient: SocketClient sendData done: 600 Iface linkstate wlan0 up
+11-04 21:02:59.352  2729  3059 D NetdConnector: RCV <- {600 Iface linkstate wlan0 up}
+11-04 21:02:59.356  2729  2778 D NetworkManagement: onEvent:600 Iface linkstate wlan0 up:5
+11-04 21:02:59.356  2729  2778 D Tethering: interfaceLinkStateChanged wlan0, true
+11-04 21:02:59.356  2729  2778 D Tethering: interfaceStatusChanged wlan0, true
+11-04 21:02:59.361  2729  3066 D AlarmManager: manual remove option = null
+11-04 21:02:59.361  2729  3066 D AlarmManager: remove(operation) changed bounds; rebatching operation = null
+11-04 21:02:59.362  2729  3066 D AlarmManager: set alarm to RTC 168367748
+11-04 21:02:59.362  2729  3066 D SupplicantWifiScannerImpl: Polling scan data for scan: 0
+11-04 21:02:59.362  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=0- MASK=0x29d87
+11-04 21:02:59.364  2729  3064 D WifiStateMachine:  ConnectedState !SCAN_RESULTS_EVENT  rt=53201396/168255320 0 0 found=31 known=0 got=31 bcn=0 con=1 untrustedcn=0
+11-04 21:02:59.365  2729  3064 D WifiStateMachine:  L2ConnectedState !SCAN_RESULTS_EVENT  rt=53201396/168255321 0 0 found=31 known=0 got=31 bcn=0 con=1 untrustedcn=0
+11-04 21:02:59.365  2729  3064 D WifiStateMachine:  ConnectModeState !SCAN_RESULTS_EVENT  rt=53201397/168255321 0 0 found=31 known=0 got=31 bcn=0 con=1 untrustedcn=0
+11-04 21:02:59.366  2729  3064 D WifiStateMachine:  DriverStartedState !SCAN_RESULTS_EVENT  rt=53201397/168255322 0 0 found=31 known=0 got=31 bcn=0 con=1 untrustedcn=0
+11-04 21:02:59.366  2729  3064 D WifiStateMachine:  SupplicantStartedState !SCAN_RESULTS_EVENT  rt=53201397/168255322 0 0 found=31 known=0 got=31 bcn=0 con=1 untrustedcn=0
+11-04 21:02:59.368  2729  3138 D WifiHW  : enter -->wifi_wait_on_socket buflen=2048
+11-04 21:02:59.372  2729  2757 V WindowManager: Rotation changed to 1 from 0, lastOrientation=-1
+11-04 21:02:59.372  2729  2757 D PowerManagerNotifier: onWakeLockAcquired: flags=1, tag="SCREEN_FROZEN", packageName=android, ownerUid=1000, ownerPid=2729, workSource=null
+11-04 21:02:59.373  2729  2757 D AppOps  : startOperation: allowing code 40 uid 1000 package android
+11-04 21:02:59.373  2729  2757 D InputDispatcher: setInputDispatchMode: enabled=1, frozen=1
+11-04 21:02:59.373  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.374  2729  2757 I WindowManager:   FREEZE null: CREATE, w = 2160, h = 1080, r=0
+11-04 21:02:59.376  2729  3085 I libPerfService: 5: set freq: 1547000, 2002000, -1, 
+11-04 21:02:59.378   324   324 I BufferQueue: [unnamed-324-888](this:0x7a5877a000,id:888,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:02:59.378   324   324 I BufferQueueConsumer: [unnamed-324-888](this:0x7a5877a000,id:888,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:02:59.378   324   324 I BufferQueueConsumer: [unnamed-324-814](this:0x7a5877a000,id:888,api:0,p:-1,c:324) setConsumerName: unnamed-324-814
+11-04 21:02:59.378   324   324 I BufferQueueConsumer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:0,p:-1,c:324) setConsumerName: ScreenshotSurface
+11-04 21:02:59.379   324   324 I BufferQueueProducer: [](this:0x7a5877a000,id:888,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:02:59.379   324   324 I BufferQueueConsumer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:0,p:-1,c:324) setDefaultBufferSize: width=2160 height=1080
+11-04 21:02:59.382  2729  3085 I libPerfService: 5: set: -1, 4, -1, 
+11-04 21:02:59.384  2729  3066 D WifiHW  : leave --> reply=id=2719
+11-04 21:02:59.384  2729  3066 D WifiHW  : bssid=ac:9e:17:ab:34:78
+11-04 21:02:59.384  2729  3066 D WifiHW  : freq=5805
+11-04 21:02:59.384  2729  3066 D WifiHW  : level=-77
+11-04 21:02:59.384  2729  3066 D WifiHW  : tsf=0000168255288032
+11-04 21:02:59.384  2729  3066 D WifiHW  : ie=00044153555301088c129824b048606c30140100000fac040100000fac040100000fac020c000b0504000200002d1aef0117ffffff00000000000000000000000000000000000000003d16a10f04000000000000000000000000000000000000007f080400000000000040bf0cb2018003eaff0000eaff0000c005019b000000c30402020202dd090010180204001c0000dd180050f2020101040003a4000027a4000042435e0062322f00
+11-04 21:02:59.384  2729  3066 D WifiHW  : flags=[WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.384  2729  3066 D WifiHW  : ssid=ASUS
+11-04 21:02:59.384  2729  3066 D WifiHW  : ====
+11-04 21:02:59.384  2729  3066 D WifiHW  : id=2720
+11-04 21:02:59.384  2729  3066 D WifiHW  : bssid=ac:9e:17:ab:34:70
+11-04 21:02:59.384  2729  3066 D WifiHW  : freq=2457
+11-04 21:02:59.384  2729  3066 D WifiHW  : level=-63
+11-04 21:02:59.384  2729  3066 D WifiHW  : tsf=0000168255287962
+11-04 21:02:59.384  2729  3066 D WifiHW  : ie=000441535553010882848b962430486c03010a2a010432040c12186030140100000fac040100000fac040100000fac020c000b0503000900002d1aad0117ffffff00000000000000000000000000000018040111003d160a0815000000000000000000000000000000000000004a0e14000a002c01c8001400050019007f080500000000000040dd1e00904c0408bf0cb259820feaff0000eaff0000c005000a000000c3020002dd090010180203041c0000dd180050f2020101840003a4000027a4000042435e0062322f00
+11-04 21:02:59.384  2729  3066 D WifiHW  : flags=[WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.384  2729  3066 D WifiHW  : ssid=ASUS
+11-04 21:02:59.384  2729  3066 D WifiHW  : ====
+11-04 21:02:59.384  2729  3066 D WifiHW  : id=2721
+11-04 21:02:59.384  2729  3066 D WifiHW  : bssid=ac:9e
+11-04 21:02:59.385  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=0- MASK=0x29d87
+11-04 21:02:59.387  2729  3064 D WifiHW  : leave --> reply=id=2719
+11-04 21:02:59.387  2729  3064 D WifiHW  : bssid=ac:9e:17:ab:34:78
+11-04 21:02:59.387  2729  3064 D WifiHW  : freq=5805
+11-04 21:02:59.387  2729  3064 D WifiHW  : level=-77
+11-04 21:02:59.387  2729  3064 D WifiHW  : tsf=0000168255288032
+11-04 21:02:59.387  2729  3064 D WifiHW  : ie=00044153555301088c129824b048606c30140100000fac040100000fac040100000fac020c000b0504000200002d1aef0117ffffff00000000000000000000000000000000000000003d16a10f04000000000000000000000000000000000000007f080400000000000040bf0cb2018003eaff0000eaff0000c005019b000000c30402020202dd090010180204001c0000dd180050f2020101040003a4000027a4000042435e0062322f00
+11-04 21:02:59.387  2729  3064 D WifiHW  : flags=[WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.387  2729  3064 D WifiHW  : ssid=ASUS
+11-04 21:02:59.387  2729  3064 D WifiHW  : ====
+11-04 21:02:59.387  2729  3064 D WifiHW  : id=2720
+11-04 21:02:59.387  2729  3064 D WifiHW  : bssid=ac:9e:17:ab:34:70
+11-04 21:02:59.387  2729  3064 D WifiHW  : freq=2457
+11-04 21:02:59.387  2729  3064 D WifiHW  : level=-63
+11-04 21:02:59.387  2729  3064 D WifiHW  : tsf=0000168255287962
+11-04 21:02:59.387  2729  3064 D WifiHW  : ie=000441535553010882848b962430486c03010a2a010432040c12186030140100000fac040100000fac040100000fac020c000b0503000900002d1aad0117ffffff00000000000000000000000000000018040111003d160a0815000000000000000000000000000000000000004a0e14000a002c01c8001400050019007f080500000000000040dd1e00904c0408bf0cb259820feaff0000eaff0000c005000a000000c3020002dd090010180203041c0000dd180050f2020101840003a4000027a4000042435e0062322f00
+11-04 21:02:59.387  2729  3064 D WifiHW  : flags=[WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.387  2729  3064 D WifiHW  : ssid=ASUS
+11-04 21:02:59.387  2729  3064 D WifiHW  : ====
+11-04 21:02:59.387  2729  3064 D WifiHW  : id=2721
+11-04 21:02:59.387  2729  3064 D WifiHW  : bssid=ac:9e
+11-04 21:02:59.387  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3025- MASK=0x29d87
+11-04 21:02:59.390   324   324 D Surface : Surface::connect(this=0x7a5af56e00,api=1)
+11-04 21:02:59.390   324   324 I BufferQueueProducer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:1,p:324,c:324) connect(P): api=1 producer=(324:/system/bin/surfaceflinger) producerControlledByApp=false
+11-04 21:02:59.390   324   324 I BufferQueueProducer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:1,p:324,c:324) new GraphicBuffer needed
+11-04 21:02:59.392   324   324 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0x7a587da080 coming from the same process: 324.
+11-04 21:02:59.394   324   324 I SurfaceFlinger: screenshot (bluerock.com.bluerock/bluerock.com.bluerock.MainActivity)
+11-04 21:02:59.394   324   324 I SurfaceFlinger: screenshot (StatusBar)
+11-04 21:02:59.394   324   324 I SurfaceFlinger: screenshot (NavigationBar)
+11-04 21:02:59.397   324   324 D Surface : Surface::disconnect(this=0x7a5af56e00,api=1)
+11-04 21:02:59.397   324   324 I BufferQueueProducer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.397   324   324 I BufferQueueConsumer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:1,p:-1,c:324) getReleasedBuffers: returning mask 0xffffffffffffffff
+11-04 21:02:59.398   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[2160 1080] 
+11-04 21:02:59.401   324   324 I BufferQueueProducer: [FrameBufferSurface_0](this:0x7a5e4f6800,id:0,api:1,p:324,c:324) queueBuffer: fps=1.07 dur=17704.11 max=17373.04 min=16.46
+11-04 21:02:59.403  2729  2781 D DisplayManagerService: Delivering display event: displayId=0, event=2
+11-04 21:02:59.406  2729  3066 D WifiHW  : leave --> reply=id=3025
+11-04 21:02:59.406  2729  3066 D WifiHW  : bssid=a0:04:60:83:e8:b8
+11-04 21:02:59.406  2729  3066 D WifiHW  : freq=2412
+11-04 21:02:59.406  2729  3066 D WifiHW  : level=-78
+11-04 21:02:59.406  2729  3066 D WifiHW  : tsf=0000168255288172
+11-04 21:02:59.406  2729  3066 D WifiHW  : ie=00134e5447525f564d425f31353235353738393937010882848b962430486c0301010706555320010b1e200100230212002a010032040c121860301a0100000fac040100000fac040100000fac028c000000000fac06460532080100002d1aa109173f000000000000000000000100000000000000000000003d16010804000000000000000000000000000000000000007f080400080000000040dd750050f204104a0001101044000102103b00010310470010000000000000000000000000000000001021000d4e4554474541522c20496e632e10230007564d423430303010240007564d42343030301042000230311054000800060050f2040001101100064e5447524253100800020084103c000101dd180050f20201018c0003a4000027a400004243bc0062326600
+11-04 21:02:59.406  2729  3066 D WifiHW  : flags=[WPA2-PSK-CCMP][WPS][ESS]
+11-04 21:02:59.406  2729  3066 D WifiHW  : ssid=NTGR_VMB_1525578997
+11-04 21:02:59.406  2729  3066 D WifiHW  : ====
+11-04 21:02:59.406  2729  3066 D WifiHW  : id=3026
+11-04 21:02:59.406  2729  3066 D WifiHW  : bssid=14:22:db:2e:5d:e5
+11-04 21:02:59.406  2729  3066 D WifiHW  : freq=5180
+11-04 21:02:59.406  2729  3066 D WifiHW  : level=-86
+11-04 21:02:59.406  2729  3066 D WifiHW  : tsf=0000168099596418
+11-04 21:02:59.406  2729  3066 D WifiHW  : ie=000864726f643130303001088c129824b048606c030124070a55532024041e95051e0030140100000fac040100000fac040100000fac020c003b0280002d1aef021bffff0000000000000000000001000000000000000000003d162405040000
+11-04 21:02:59.408  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3031- MASK=0x29d87
+11-04 21:02:59.408  2729  3048 D LIGHT   : [ALS]>>en:1,cnt:85,EV_ABS event:code,0;value,90
+11-04 21:02:59.408  2729  3048 E PROXIMITY: ProximitySensor: unknown event (type=3, code=0)
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: onSensorChanged: mLightSensorEnabled=true, mAmbientLuxValid=true
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: updateAmbientLux: mAmbientLuxValid=true, AAL=true
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: [0, 100]: lux=90.0, weight=1005000.0
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: totalWeight=1005000.0, newAmbientLux=90.0
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: updateAmbientLux: ambientLux=90.0, timeToBrighten=2500, timeToDarken=3000, current=145.0
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: updateAmbientLux: Scheduling ambient lux update for 5320394053203940 (in 2499 ms)
+11-04 21:02:59.409  2729  2788 D AutomaticBrightnessController: onSensorChanged: lux = 90.0
+11-04 21:02:59.410  2729  3066 D WifiHW  : leave --> reply=id=3031
+11-04 21:02:59.410  2729  3066 D WifiHW  : bssid=70:73:cb:b8:b0:af
+11-04 21:02:59.410  2729  3066 D WifiHW  : freq=2412
+11-04 21:02:59.410  2729  3066 D WifiHW  : level=-81
+11-04 21:02:59.410  2729  3066 D WifiHW  : tsf=0000168099596595
+11-04 21:02:59.410  2729  3066 D WifiHW  : ie=0009546865205368697265010882848b960c1218240301010706555320010b1e2a010232043048606c30140100000fac040100000fac040100000fac0200002d1aad511bffffff000000000000000000000000000000000000000033027e9d3d160100110000000000000000000000000000000000000046050200010000dd180050f2020101010003a4000027a4000042435e0062322f00dd0700039301740320dd0e0017f207000101067073cbb8b0afdd0b0017f20100010100000007
+11-04 21:02:59.410  2729  3066 D WifiHW  : flags=[WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.410  2729  3066 D WifiHW  : ssid=The Shire
+11-04 21:02:59.410  2729  3066 D WifiHW  : ====
+11-04 21:02:59.410  2729  3066 D WifiHW  : id=3032
+11-04 21:02:59.410  2729  3066 D WifiHW  : bssid=b0:93:5b:c7:66:9f
+11-04 21:02:59.410  2729  3066 D WifiHW  : freq=2462
+11-04 21:02:59.410  2729  3066 D WifiHW  : level=-84
+11-04 21:02:59.410  2729  3066 D WifiHW  : tsf=0000168099596642
+11-04 21:02:59.410  2729  3066 D WifiHW  : ie=000a363448696c6c73696465010882848b968c12982403010b0706555320010b1e2a01003204b048606c460573d000000c2d1aad011bffffff00000000000000000001000000000406e6470d003d160b0017000000000000000000000000000000000000007f0800000f0200000040dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd9f0050f204104a0001101044000102103b00010310470010db58521c45805146bbcfc9f79a2daffe1021001c41746865726f7320436f6d6d756e69636174696f6
+11-04 21:02:59.410  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3025- MASK=0x29d87
+11-04 21:02:59.411  2729  3064 D WifiHW  : leave --> reply=id=3025
+11-04 21:02:59.411  2729  3064 D WifiHW  : bssid=a0:04:60:83:e8:b8
+11-04 21:02:59.411  2729  3064 D WifiHW  : freq=2412
+11-04 21:02:59.411  2729  3064 D WifiHW  : level=-78
+11-04 21:02:59.411  2729  3064 D WifiHW  : tsf=0000168255288172
+11-04 21:02:59.411  2729  3064 D WifiHW  : ie=00134e5447525f564d425f31353235353738393937010882848b962430486c0301010706555320010b1e200100230212002a010032040c121860301a0100000fac040100000fac040100000fac028c000000000fac06460532080100002d1aa109173f000000000000000000000100000000000000000000003d16010804000000000000000000000000000000000000007f080400080000000040dd750050f204104a0001101044000102103b00010310470010000000000000000000000000000000001021000d4e4554474541522c20496e632e10230007564d423430303010240007564d42343030301042000230311054000800060050f2040001101100064e5447524253100800020084103c000101dd180050f20201018c0003a4000027a400004243bc0062326600
+11-04 21:02:59.411  2729  3064 D WifiHW  : flags=[WPA2-PSK-CCMP][WPS][ESS]
+11-04 21:02:59.411  2729  3064 D WifiHW  : ssid=NTGR_VMB_1525578997
+11-04 21:02:59.411  2729  3064 D WifiHW  : ====
+11-04 21:02:59.411  2729  3064 D WifiHW  : id=3026
+11-04 21:02:59.411  2729  3064 D WifiHW  : bssid=14:22:db:2e:5d:e5
+11-04 21:02:59.411  2729  3064 D WifiHW  : freq=5180
+11-04 21:02:59.411  2729  3064 D WifiHW  : level=-86
+11-04 21:02:59.411  2729  3064 D WifiHW  : tsf=0000168099596418
+11-04 21:02:59.411  2729  3064 D WifiHW  : ie=000864726f643130303001088c129824b048606c030124070a55532024041e95051e0030140100000fac040100000fac040100000fac020c003b0280002d1aef021bffff0000000000000000000001000000000000000000003d162405040000
+11-04 21:02:59.412  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3037- MASK=0x29d87
+11-04 21:02:59.413  2729  3066 D WifiHW  : leave --> reply=id=3037
+11-04 21:02:59.413  2729  3066 D WifiHW  : bssid=b0:93:5b:c7:66:a0
+11-04 21:02:59.413  2729  3066 D WifiHW  : freq=5240
+11-04 21:02:59.413  2729  3066 D WifiHW  : level=-95
+11-04 21:02:59.413  2729  3066 D WifiHW  : tsf=0000168099596444
+11-04 21:02:59.413  2729  3066 D WifiHW  : ie=000f363448696c6c73696465203547487a01088c129824b048606c030130050400010100074c55532024011e28011e2c011e30011e3401183801183c01184001186401186801186c01187001187401187801187c01188001188401188801188c011895011e99011e9d011ea1011ea5011e00200103460573d000000c2d1aef091bffffff00000000000000000001000000000000000000003d16300704000000000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1d0050f204104a0001101044000102103c0001021049000600372a00012030140100000fac040100000fac040100000fac020000
+11-04 21:02:59.413  2729  3066 D WifiHW  : flags=[WPA2-PSK-CCMP][WPS][ESS]
+11-04 21:02:59.413  2729  3066 D WifiHW  : ssid=64Hillside 5GHz
+11-04 21:02:59.413  2729  3066 D WifiHW  : ====
+11-04 21:02:59.413  2729  3066 D WifiHW  : id=3038
+11-04 21:02:59.413  2729  3066 D WifiHW  : bssid=14:22:db:2e:5d:e8
+11-04 21:02:59.413  2729  3066 D WifiHW  : freq=2412
+11-04 21:02:59.413  2729  3066 D WifiHW  : level=-67
+11-04 21:02:59.413  2729  3066 D WifiHW  : tsf=0000168099596767
+11-04 21:02:59.413  2729  3066 D WifiHW  : ie=0000010882848b960c1218240301010504010200000706555320010b1e2a010032043048606c3b0251002d1aef121bffff0000000000000000000001000000000000000000003d16010000000000000000000000000000000000000000007f
+11-04 21:02:59.414  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3031- MASK=0x29d87
+11-04 21:02:59.417  2729  2757 D InputReader: InputReader:: getSwitchState lock 
+11-04 21:02:59.417  2729  2757 D InputReader: InputReader::getStateLocked:: return 
+11-04 21:02:59.417  2729  2757 I ActivityManager: Config changes=480 {1.0 ?mcc?mnc [en_AT] ldltr sw360dp w360dp h648dp 480dpi nrml long port finger qwerty/v/v -nav/h s.80}
+11-04 21:02:59.419  2729  3064 D WifiHW  : leave --> reply=id=3031
+11-04 21:02:59.419  2729  3064 D WifiHW  : bssid=70:73:cb:b8:b0:af
+11-04 21:02:59.419  2729  3064 D WifiHW  : freq=2412
+11-04 21:02:59.419  2729  3064 D WifiHW  : level=-81
+11-04 21:02:59.419  2729  3064 D WifiHW  : tsf=0000168099596595
+11-04 21:02:59.419  2729  3064 D WifiHW  : ie=0009546865205368697265010882848b960c1218240301010706555320010b1e2a010232043048606c30140100000fac040100000fac040100000fac0200002d1aad511bffffff000000000000000000000000000000000000000033027e9d3d160100110000000000000000000000000000000000000046050200010000dd180050f2020101010003a4000027a4000042435e0062322f00dd0700039301740320dd0e0017f207000101067073cbb8b0afdd0b0017f20100010100000007
+11-04 21:02:59.419  2729  3064 D WifiHW  : flags=[WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.419  2729  3064 D WifiHW  : ssid=The Shire
+11-04 21:02:59.419  2729  3064 D WifiHW  : ====
+11-04 21:02:59.419  2729  3064 D WifiHW  : id=3032
+11-04 21:02:59.419  2729  3064 D WifiHW  : bssid=b0:93:5b:c7:66:9f
+11-04 21:02:59.419  2729  3064 D WifiHW  : freq=2462
+11-04 21:02:59.419  2729  3064 D WifiHW  : level=-84
+11-04 21:02:59.419  2729  3064 D WifiHW  : tsf=0000168099596642
+11-04 21:02:59.419  2729  3064 D WifiHW  : ie=000a363448696c6c73696465010882848b968c12982403010b0706555320010b1e2a01003204b048606c460573d000000c2d1aad011bffffff00000000000000000001000000000406e6470d003d160b0017000000000000000000000000000000000000007f0800000f0200000040dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd9f0050f204104a0001101044000102103b00010310470010db58521c45805146bbcfc9f79a2daffe1021001c41746865726f7320436f6d6d756e69636174696f6
+11-04 21:02:59.419  2729  2781 D InputReader: InputReader:: requestRefreshConfiguration lock 
+11-04 21:02:59.419  2729  2781 D InputReader: InputReader:: requestRefreshConfiguration unlock 
+11-04 21:02:59.419  2729  2781 D InputReader: InputReader:: requestRefreshConfiguration lock 
+11-04 21:02:59.419  2729  2781 D InputReader: InputReader:: requestRefreshConfiguration unlock 
+11-04 21:02:59.420  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3045- MASK=0x29d87
+11-04 21:02:59.421  2729  3066 D WifiHW  : leave --> reply=id=3045
+11-04 21:02:59.421  2729  3066 D WifiHW  : bssid=22:86:8c:a2:32:64
+11-04 21:02:59.421  2729  3066 D WifiHW  : freq=2437
+11-04 21:02:59.421  2729  3066 D WifiHW  : level=-86
+11-04 21:02:59.421  2729  3066 D WifiHW  : tsf=0000168099596622
+11-04 21:02:59.421  2729  3066 D WifiHW  : ie=000b7866696e69747977696669010882848b968c1298240301060504000100000706555320010b1e2a01003204b048606c2d1aad011bffffff00000000000000000001000000000406e6470d003d16060804000000000000000000000000000000000000007f080000000000000040dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7f
+11-04 21:02:59.421  2729  3066 D WifiHW  : flags=[ESS]
+11-04 21:02:59.421  2729  3066 D WifiHW  : ssid=xfinitywifi
+11-04 21:02:59.421  2729  3066 D WifiHW  : ====
+11-04 21:02:59.421  2729  3066 D WifiHW  : id=3046
+11-04 21:02:59.421  2729  3066 D WifiHW  : bssid=c2:93:5b:c7:66:9f
+11-04 21:02:59.421  2729  3066 D WifiHW  : freq=2462
+11-04 21:02:59.421  2729  3066 D WifiHW  : level=-88
+11-04 21:02:59.421  2729  3066 D WifiHW  : tsf=0000168099596339
+11-04 21:02:59.421  2729  3066 D WifiHW  : ie=000b7866696e69747977696669010882848b968c12982403010b0706555320010b1e2a01003204b048606c2d1aad011bffffff00000000000000000001000000000406e6470d003d160b0017000000000000000000000000000000000000007f080000000000000040dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7f
+11-04 21:02:59.421  2729  3066 D WifiHW  : flags=[ESS]
+11-04 21:02:59.421  2729  3066 D WifiHW  : ssid=xfinitywifi
+11-04 21:02:59.421  2729  3066 D WifiHW  : ====
+11-04 21:02:59.421  2729  3066 D WifiHW  : id=3047
+11-04 21:02:59.421  2729  3066 D WifiHW  : bssid=c2:93:5b:c7:66:a0
+11-04 21:02:59.421  2729  3066 D WifiHW  : freq=5240
+11-04 21:02:59.421  2729  3066 D WifiHW  : level=-92
+11-04 21:02:59.421  2729  3066 D WifiHW  : tsf=0000168099596473
+11-04 21:02:59.421  2729  3066 D WifiHW  : ie=000b7866696e6974797769666901088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186
+11-04 21:02:59.422  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3037- MASK=0x29d87
+11-04 21:02:59.424  2729  3064 D WifiHW  : leave --> reply=id=3037
+11-04 21:02:59.424  2729  3064 D WifiHW  : bssid=b0:93:5b:c7:66:a0
+11-04 21:02:59.424  2729  3064 D WifiHW  : freq=5240
+11-04 21:02:59.424  2729  3064 D WifiHW  : level=-95
+11-04 21:02:59.424  2729  3064 D WifiHW  : tsf=0000168099596444
+11-04 21:02:59.424  2729  3064 D WifiHW  : ie=000f363448696c6c73696465203547487a01088c129824b048606c030130050400010100074c55532024011e28011e2c011e30011e3401183801183c01184001186401186801186c01187001187401187801187c01188001188401188801188c011895011e99011e9d011ea1011ea5011e00200103460573d000000c2d1aef091bffffff00000000000000000001000000000000000000003d16300704000000000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1d0050f204104a0001101044000102103c0001021049000600372a00012030140100000fac040100000fac040100000fac020000
+11-04 21:02:59.424  2729  3064 D WifiHW  : flags=[WPA2-PSK-CCMP][WPS][ESS]
+11-04 21:02:59.424  2729  3064 D WifiHW  : ssid=64Hillside 5GHz
+11-04 21:02:59.424  2729  3064 D WifiHW  : ====
+11-04 21:02:59.424  2729  3064 D WifiHW  : id=3038
+11-04 21:02:59.424  2729  3064 D WifiHW  : bssid=14:22:db:2e:5d:e8
+11-04 21:02:59.424  2729  3064 D WifiHW  : freq=2412
+11-04 21:02:59.424  2729  3064 D WifiHW  : level=-67
+11-04 21:02:59.424  2729  3064 D WifiHW  : tsf=0000168099596767
+11-04 21:02:59.424  2729  3064 D WifiHW  : ie=0000010882848b960c1218240301010504010200000706555320010b1e2a010032043048606c3b0251002d1aef121bffff0000000000000000000001000000000000000000003d16010000000000000000000000000000000000000000007f
+11-04 21:02:59.424  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3052- MASK=0x29d87
+11-04 21:02:59.425  2729  3066 D WifiHW  : leave --> reply=id=3052
+11-04 21:02:59.425  2729  3066 D WifiHW  : bssid=d2:93:5b:c7:66:a0
+11-04 21:02:59.425  2729  3066 D WifiHW  : freq=5240
+11-04 21:02:59.425  2729  3066 D WifiHW  : level=-94
+11-04 21:02:59.425  2729  3066 D WifiHW  : tsf=0000168255288125
+11-04 21:02:59.425  2729  3066 D WifiHW  : ie=000001088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186801186c01187001187401187801187c01188001188401188801188c011895011e99011e9d011ea1011ea5011e002001032d1aef091bffffff00000000000000000001000000000000000000003d16300704000000000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1a0050f20101000050f20202000050f2040050f20201000050f20230180100000fac020200000fac04000fac020100000fac020000
+11-04 21:02:59.425  2729  3066 D WifiHW  : flags=[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]
+11-04 21:02:59.425  2729  3066 D WifiHW  : ssid=
+11-04 21:02:59.425  2729  3066 D WifiHW  : ####
+11-04 21:02:59.425  2729  3066 D WifiHW  : 020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7f
+11-04 21:02:59.425  2729  3066 D WifiHW  : flags=[ESS]
+11-04 21:02:59.425  2729  3066 D WifiHW  : ssid=xfinitywifi
+11-04 21:02:59.425  2729  3066 D WifiHW  : ====
+11-04 21:02:59.425  2729  3066 D WifiHW  : id=3047
+11-04 21:02:59.425  2729  3066 D WifiHW  : bssid=c2:93:5b:c7:66:a0
+11-04 21:02:59.425  2729  3066 D WifiHW  : freq=5240
+11-04 21:02:59.425  2729  3066 D WifiHW  : level=-92
+11-04 21:02:59.425  2729  3066 D WifiHW  : tsf=0000168099596473
+11-04 21:02:59.425  2729  3066 D WifiHW  : ie=000b7866696e6974797769666901088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186
+11-04 21:02:59.425  2729  3066 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3053- MASK=0x29d87
+11-04 21:02:59.425  2729  3066 D WifiHW  : leave --> reply=id=3052
+11-04 21:02:59.425  2729  3066 D WifiHW  : bssid=d2:93:5b:c7:66:a0
+11-04 21:02:59.425  2729  3066 D WifiHW  : freq=5240
+11-04 21:02:59.425  2729  3066 D WifiHW  : level=-94
+11-04 21:02:59.425  2729  3066 D WifiHW  : tsf=0000168255288125
+11-04 21:02:59.425  2729  3066 D WifiHW  : ie=000001088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186801186c01187001187401187801187c01188001188401188801188c011895011e99011e9d011ea1011ea5011e002001032d1aef091bffffff00000000000000000001000000000000000000003d16300704000000000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1a0050f20101000050f20202000050f2040050f20201000050f20230180100000fac020200000fac04000fac020100000fac020000
+11-04 21:02:59.425  2729  3066 D WifiHW  : flags=[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]
+11-04 21:02:59.425  2729  3066 D WifiHW  : ssid=
+11-04 21:02:59.425  2729  3066 D WifiHW  : ####
+11-04 21:02:59.426  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: ASUS, BSSID: ac:9e:17:ab:34:78, capabilities: [WPA2-PSK-CCMP][ESS], level: -77, frequency: 5805, timestamp: 168255288032, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5775, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.426  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3045- MASK=0x29d87
+11-04 21:02:59.427  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: ASUS, BSSID: ac:9e:17:ab:34:70, capabilities: [WPA2-PSK-CCMP][ESS], level: -63, frequency: 2457, timestamp: 168255287962, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.427  2729  3054 I InputReader: Reconfiguring input devices.  changes=0x00000004
+11-04 21:02:59.427  2729  3054 I InputReader: Device reconfigured: id=1, name='mtk-tpd', size 2160x1080, orientation 1, mode 1, display id 0
+11-04 21:02:59.427  2729  3054 D InputDispatcher: notifyDeviceReset - eventTime=53201459137092, deviceId=1
+11-04 21:02:59.428  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.429  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: ASUS, BSSID: ac:9e:17:ab:34:74, capabilities: [WPA2-PSK-CCMP][ESS], level: -80, frequency: 5180, timestamp: 168255288001, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5210, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.430  2729  3064 D WifiHW  : leave --> reply=id=3045
+11-04 21:02:59.430  2729  3064 D WifiHW  : bssid=22:86:8c:a2:32:64
+11-04 21:02:59.430  2729  3064 D WifiHW  : freq=2437
+11-04 21:02:59.430  2729  3064 D WifiHW  : level=-86
+11-04 21:02:59.430  2729  3064 D WifiHW  : tsf=0000168099596622
+11-04 21:02:59.430  2729  3064 D WifiHW  : ie=000b7866696e69747977696669010882848b968c1298240301060504000100000706555320010b1e2a01003204b048606c2d1aad011bffffff00000000000000000001000000000406e6470d003d16060804000000000000000000000000000000000000007f080000000000000040dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7f
+11-04 21:02:59.430  2729  3064 D WifiHW  : flags=[ESS]
+11-04 21:02:59.430  2729  3064 D WifiHW  : ssid=xfinitywifi
+11-04 21:02:59.430  2729  3064 D WifiHW  : ====
+11-04 21:02:59.430  2729  3064 D WifiHW  : id=3046
+11-04 21:02:59.430  2729  3064 D WifiHW  : bssid=c2:93:5b:c7:66:9f
+11-04 21:02:59.430  2729  3064 D WifiHW  : freq=2462
+11-04 21:02:59.430  2729  3064 D WifiHW  : level=-88
+11-04 21:02:59.430  2729  3064 D WifiHW  : tsf=0000168099596339
+11-04 21:02:59.430  2729  3064 D WifiHW  : ie=000b7866696e69747977696669010882848b968c12982403010b0706555320010b1e2a01003204b048606c2d1aad011bffffff00000000000000000001000000000406e6470d003d160b0017000000000000000000000000000000000000007f080000000000000040dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7f
+11-04 21:02:59.430  2729  3064 D WifiHW  : flags=[ESS]
+11-04 21:02:59.430  2729  3064 D WifiHW  : ssid=xfinitywifi
+11-04 21:02:59.430  2729  3064 D WifiHW  : ====
+11-04 21:02:59.430  2729  3064 D WifiHW  : id=3047
+11-04 21:02:59.430  2729  3064 D WifiHW  : bssid=c2:93:5b:c7:66:a0
+11-04 21:02:59.430  2729  3064 D WifiHW  : freq=5240
+11-04 21:02:59.430  2729  3064 D WifiHW  : level=-92
+11-04 21:02:59.430  2729  3064 D WifiHW  : tsf=0000168099596473
+11-04 21:02:59.430  2729  3064 D WifiHW  : ie=000b7866696e6974797769666901088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186
+11-04 21:02:59.430  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: drod1000, BSSID: 14:22:db:4f:70:86, capabilities: [WPA2-PSK-CCMP][ESS], level: -67, frequency: 2412, timestamp: 168255288215, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.431  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: drod1000, BSSID: 14:22:db:4f:70:85, capabilities: [WPA2-PSK-CCMP][ESS], level: -81, frequency: 5180, timestamp: 168255288082, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5210, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.432  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: drod1000, BSSID: 14:22:db:4f:85:66, capabilities: [WPA2-PSK-CCMP][ESS], level: -75, frequency: 2412, timestamp: 168255288238, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.432  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: drod1000, BSSID: 14:22:db:2e:5d:e6, capabilities: [WPA2-PSK-CCMP][ESS], level: -76, frequency: 2412, timestamp: 168255288196, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.433  2729  2757 D InputReader: InputReader:: getSwitchState lock 
+11-04 21:02:59.433  2729  2757 D InputReader: InputReader::getStateLocked:: return 
+11-04 21:02:59.434  2729 30124 D InputReader: K_lock
+11-04 21:02:59.434  2729 30124 D InputReader: SK_Lock_r
+11-04 21:02:59.435  2729  3722 D InputReader: K_lock
+11-04 21:02:59.435  2729  3722 D InputReader: SK_Lock_r
+11-04 21:02:59.436  2729  2757 D RunningBoosterService: [onAfterActivityResumed] mScreenStateChange = false mScreenOffState = false
+11-04 21:02:59.438  2729  2757 D InputDispatcher: setInputWindows
+11-04 21:02:59.439  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.441  2729  2729 D WindowManager: Configuration changed, remove fast starting window catch
+11-04 21:02:59.441  2729  2729 I Tethering: StateReceiver onReceive action:android.intent.action.CONFIGURATION_CHANGED
+11-04 21:02:59.446  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: NTGR_VMB_1525578997, BSSID: a0:04:60:83:e8:b8, capabilities: [WPA2-PSK-CCMP][WPS][ESS], level: -78, frequency: 2412, timestamp: 168255288172, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.447  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: NTGR_VMB_1041408049, BSSID: 10:da:43:c6:1d:3a, capabilities: [WPA2-PSK-CCMP][WPS][ESS], level: -83, frequency: 2452, timestamp: 168255288274, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.447  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: , BSSID: 00:0d:67:24:ad:88, capabilities: [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS], level: -81, frequency: 2412, timestamp: 168255288384, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.448  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: TheTreeHouse, BSSID: a0:04:60:8a:62:8d, capabilities: [WPA2-PSK-CCMP][WPS][ESS], level: -89, frequency: 2452, timestamp: 168255288058, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.448  3177  3177 D WindowClient: Add to mViews: com.android.systemui.assist.AssistOrbContainer{52e224 G.E...... ......I. 0,0-0,0}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.449  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: , BSSID: 14:22:db:4f:70:88, capabilities: [ESS], level: -67, frequency: 2412, timestamp: 168255288335, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.449  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: , BSSID: 14:22:db:4f:85:68, capabilities: [ESS], level: -74, frequency: 2412, timestamp: 168255288360, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.449  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: , BSSID: 00:3a:9a:f0:76:20, capabilities: [WPA2-EAP-CCMP][ESS], level: -82, frequency: 2412, timestamp: 168255288298, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.450  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: , BSSID: 12:86:8c:a2:32:64, capabilities: [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS], level: -88, frequency: 2437, timestamp: 168255288414, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.451  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: XFINITY, BSSID: e2:93:5b:c7:66:a0, capabilities: [WPA2-EAP-CCMP][ESS], level: -92, frequency: 5240, timestamp: 168255288149, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5210, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.453  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3052- MASK=0x29d87
+11-04 21:02:59.455  2729  3066 D WifiScanningService: WifiSingleScanStateMachine onFullScanResult received bucketsScanned =0fullScanResultSSID: , BSSID: d2:93:5b:c7:66:a0, capabilities: [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS], level: -94, frequency: 5240, timestamp: 168255288125, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5210, centerFreq1: 0, 80211mcResponder: is not supported
+11-04 21:02:59.457  2729  3064 D WifiHW  : leave --> reply=id=3052
+11-04 21:02:59.457  2729  3064 D WifiHW  : bssid=d2:93:5b:c7:66:a0
+11-04 21:02:59.457  2729  3064 D WifiHW  : freq=5240
+11-04 21:02:59.457  2729  3064 D WifiHW  : level=-94
+11-04 21:02:59.457  2729  3064 D WifiHW  : tsf=0000168255288125
+11-04 21:02:59.457  2729  3064 D WifiHW  : ie=000001088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186801186c01187001187401187801187c01188001188401188801188c011895011e99011e9d011ea1011ea5011e002001032d1aef091bffffff00000000000000000001000000000000000000003d16300704000000000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1a0050f20101000050f20202000050f2040050f20201000050f20230180100000fac020200000fac04000fac020100000fac020000
+11-04 21:02:59.457  2729  3064 D WifiHW  : flags=[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]
+11-04 21:02:59.457  2729  3064 D WifiHW  : ssid=
+11-04 21:02:59.457  2729  3064 D WifiHW  : ####
+11-04 21:02:59.457  2729  3064 D WifiHW  : 020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7f
+11-04 21:02:59.457  2729  3064 D WifiHW  : flags=[E ) {
+11-04 21:02:59.457  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 BSS RANGE=3053- MASK=0x29d87
+11-04 21:02:59.460  2729  3066 D WifiScanningService: onScanStatus event received, event=0
+11-04 21:02:59.460  2729  3064 D WifiHW  : leave --> reply=id=3052
+11-04 21:02:59.460  2729  3064 D WifiHW  : bssid=d2:93:5b:c7:66:a0
+11-04 21:02:59.460  2729  3064 D WifiHW  : freq=5240
+11-04 21:02:59.460  2729  3064 D WifiHW  : level=-94
+11-04 21:02:59.460  2729  3064 D WifiHW  : tsf=0000168255288125
+11-04 21:02:59.460  2729  3064 D WifiHW  : ie=000001088c129824b048606c030130050400010000074c55532024011e28011e2c011e30011e3401183801183c01184001186401186801186c01187001187401187801187c01188001188401188801188c011895011e99011e9d011ea1011ea5011e002001032d1aef091bffffff00000000000000000001000000000000000000003d16300704000000000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1a0050f20101000050f20202000050f2040050f20201000050f20230180100000fac020200000fac04000fac020100000fac020000
+11-04 21:02:59.460  2729  3064 D WifiHW  : flags=[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]
+11-04 21:02:59.460  2729  3064 D WifiHW  : ssid=
+11-04 21:02:59.460  2729  3064 D WifiHW  : ####
+11-04 21:02:59.460  2729  3064 E WifiStateMachine: mIsFullScanOngoing: false, mSendScanResultsBroadcast: false
+11-04 21:02:59.461  2729  2729 E Tethering: updateConfiguration: wrong MCCMNC =
+11-04 21:02:59.461  2729  2729 I Tethering: ifaceTypes = null, use default
+11-04 21:02:59.461  2729  2729 I Tethering: upstreamIfaceTypes.add:  0 1 5 7 9 49
+11-04 21:02:59.463  2729  3066 D WifiScanningService: singleScanResults: ClientInfo[uid=1000,android.os.Messenger@da87dda],Id=228,results=17
+11-04 21:02:59.463  2729  3066 D WifiScanningService: singleScanResults: ClientInfo[uid=1000,android.os.Messenger@da87dda],Id=1,results=17
+11-04 21:02:59.464  2729  3066 E WifiScanningService: WifiSingleScanStateMachine IdleState enter
+11-04 21:02:59.464  2729  3064 D WifiScanner: removing listener for single scan
+11-04 21:02:59.465  2729  3064 D WifiConnectivityManager: AllSingleScanListener onResults: start QNS
+11-04 21:02:59.465  2729  3064 D WifiStateMachine: Supplicant is under steady state: COMPLETED
+11-04 21:02:59.465  2729  3064 D WifiQualifiedNetworkSelector:: ==========start qualified Network Selection==========
+11-04 21:02:59.467  2729  3064 D WifiQualifiedNetworkSelector:: ASUS:ac:9e:17:ab:34:78 / ASUS:ac:9e:17:ab:34:70 / ASUS:ac:9e:17:ab:34:74 / drod1000:14:22:db:4f:70:86 / drod1000:14:22:db:4f:70:85 / drod1000:14:22:db:4f:85:66 / drod1000:14:22:db:2e:5d:e6 / NTGR_VMB_1525578997:a0:04:60:83:e8:b8 / NTGR_VMB_1041408049:10:da:43:c6:1d:3a / :00:0d:67:24:ad:88 / TheTreeHouse:a0:04:60:8a:62:8d / :14:22:db:4f:70:88 / :14:22:db:4f:85:68 / :00:3a:9a:f0:76:20 / :12:86:8c:a2:32:64 / XFINITY:e2:93:5b:c7:66:a0 / :d2:93:5b:c7:66:a0 /  dump for scanDetails at begin of selectQualifiedNetwork()
+11-04 21:02:59.467  2729  3064 D WifiQualifiedNetworkSelector:: Current network is: "ASUS" ,ID is: 4
+11-04 21:02:59.467  2729  3064 D WifiQualifiedNetworkSelector:: Current band = 5GHz bandcurrent RSSI is: -73
+11-04 21:02:59.468  2729  3064 D WifiQualifiedNetworkSelector:: Current network is not qualified
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector:: Saved Network List
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector::     "ASUS":4  User Preferred BSSID:null FQDN:null NETWORK_SELECTION_ENABLED Disable account: 0 0 0 0 0 0 0 0 0 0 0 Connect Choice:null set time:-1
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector::     "ATT504":1  User Preferred BSSID:null FQDN:null NETWORK_SELECTION_ENABLED Disable account: 0 0 0 0 0 0 0 0 0 0 0 Connect Choice:null set time:-1
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector::     "SlackGuest":0  User Preferred BSSID:null FQDN:null NETWORK_SELECTION_ENABLED Disable account: 0 0 0 0 0 0 0 0 0 0 0 Connect Choice:null set time:-1
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector::     "GGT-WIFI":5  User Preferred BSSID:null FQDN:null NETWORK_SELECTION_ENABLED Disable account: 0 0 0 0 0 0 0 0 0 0 0 Connect Choice:"Ellipsis Jetpack FFEC"WPA_PSK set time:1541085539687
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector::     "Ellipsis Jetpack FFEC":3  User Preferred BSSID:null FQDN:null NETWORK_SELECTION_ENABLED Disable account: 0 0 0 0 0 0 0 0 0 0 0 Connect Choice:null set time:-1
+11-04 21:02:59.469  2729  3064 D WifiQualifiedNetworkSelector::     "YPC_0A8CAC":2  User Preferred BSSID:null FQDN:null NETWORK_SELECTION_ENABLED Disable account: 0 0 0 0 0 0 0 0 0 0 0 Connect Choice:null set time:-1
+11-04 21:02:59.469  2729  3064 D WifiConfigManager: getSavedNetworkFromScanDetail(): try "ASUS"WPA_PSK SSID="ASUS" ASUS [WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.472  2729  3064 D WifiQualifiedNetworkSelector:: networkCandidate updated to "ASUS"
+11-04 21:02:59.472  2729  3064 D WifiConfigManager: getSavedNetworkFromScanDetail(): try "ASUS"WPA_PSK SSID="ASUS" ASUS [WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.474  2729  3064 D WifiConfigManager: getSavedNetworkFromScanDetail(): try "ASUS"WPA_PSK SSID="ASUS" ASUS [WPA2-PSK-CCMP][ESS]
+11-04 21:02:59.476  2729  3064 D WifiQualifiedNetworkSelector:: TheTreeHouse:a0:04:60:8a:62:8d(2.4GHz)-89 / XFINITY:e2:93:5b:c7:66:a0(5GHz)-92 /  skipped due to low signal
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector:: drod1000:14:22:db:4f:70:86 / drod1000:14:22:db:4f:70:85 / drod1000:14:22:db:4f:85:66 / drod1000:14:22:db:2e:5d:e6 / NTGR_VMB_1525578997:a0:04:60:83:e8:b8 / NTGR_VMB_1041408049:10:da:43:c6:1d:3a /  skipped due to not saved
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector::  
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector:: 00:0d:67:24:ad:88 / 14:22:db:4f:70:88 / 14:22:db:4f:85:68 / 00:3a:9a:f0:76:20 / 12:86:8c:a2:32:64 / d2:93:5b:c7:66:a0 /  skipped due to not valid SSID
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector::  RSSI score: 32 5GHz bonus: 40 Same network with current associated. Bonus: 16 Same BSSID with current association. Bonus: 24 Secure network Bonus:80 Score for scanResult: SSID: ASUS, BSSID: ac:9e:17:ab:34:78, capabilities: [WPA2-PSK-CCMP][ESS], level: -77, frequency: 5805, timestamp: 168255288032, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5775, centerFreq1: 0, 80211mcResponder: is not supported and Network ID: 4 final score:192
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector:: 
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector::  RSSI score: 88 Same network with current associated. Bonus: 16 Secure network Bonus:80 Score for scanResult: SSID: ASUS, BSSID: ac:9e:17:ab:34:70, capabilities: [WPA2-PSK-CCMP][ESS], level: -63, frequency: 2457, timestamp: 168255287962, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 0, centerFreq0: 0, centerFreq1: 0, 80211mcResponder: is not supported and Network ID: 4 final score:184
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector:: 
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector::  RSSI score: 20 5GHz bonus: 40 Same network with current associated. Bonus: 16 Secure network Bonus:80 Score for scanResult: SSID: ASUS, BSSID: ac:9e:17:ab:34:74, capabilities: [WPA2-PSK-CCMP][ESS], level: -80, frequency: 5180, timestamp: 168255288001, distance: ?(cm), distanceSd: ?(cm), passpoint: no, ChannelBandwidth: 2, centerFreq0: 5210, centerFreq1: 0, 80211mcResponder: is not supported and Network ID: 4 final score:156
+11-04 21:02:59.477  2729  3064 D WifiQualifiedNetworkSelector:: 
+11-04 21:02:59.478  2729  3064 D WifiQualifiedNetworkSelector:: HighestScoreCandate:"ASUS" ConnectChoice:null
+11-04 21:02:59.478  2729  3064 D WifiQualifiedNetworkSelector:: After user choice adjust, the final candidate is:"ASUS":4 : ac:9e:17:ab:34:78
+11-04 21:02:59.478  2729  3064 D WifiQualifiedNetworkSelector:: "ASUS":4 is already the best choice!
+11-04 21:02:59.479  2729  3064 D WifiConnectivityManager: AllSingleScanListener: QNS candidate-"ASUS"
+11-04 21:02:59.479  2729  3064 D WifiConnectivityManager: connectToNetwork: Either already connected or is connecting to "ASUS" : ac:9e:17:ab:34:78
+11-04 21:02:59.483  1992  1993 D FRR     : buff=0x7e50e02306, len=174
+11-04 21:02:59.483  1992  1993 D FRR     : uevent[0]=0x7e50e02306, len=41, "change@/devices/virtual/misc/m_smart_misc"
+11-04 21:02:59.483  1992  1993 D FRR     : voteFps(60, 0)
+11-04 21:02:59.483  1992  1993 D FRR     : ThermalListener loop:
+11-04 21:02:59.484  2729  2729 I Tethering: checkDunRequired:2
+11-04 21:02:59.484  2729  2729 D Tethering: mPreferredUpstreamMobileApn = 5
+11-04 21:02:59.485  2729  2729 I AppWidgetServiceImpl: Received broadcast: android.intent.action.CONFIGURATION_CHANGED on user -10000
+11-04 21:02:59.485  2729  2729 I AppWidgetServiceImpl: onConfigurationChanged()
+11-04 21:02:59.485  1568  1588 D Surface : Surface::disconnect(this=0x7b16654e00,api=1)
+11-04 21:02:59.487   324   500 I BufferQueueProducer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:886,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.487   324   500 I BufferQueueConsumer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:886,api:1,p:-1,c:324) getReleasedBuffers: returning mask 0xffffffffffffffff
+11-04 21:02:59.489  3177  3306 D OpenGLRenderer: CanvasContext() 0x7af6388a00
+11-04 21:02:59.490  3177  3177 D ViewRootImpl[AssistPreviewPanel]: hardware acceleration is enabled, this = ViewRoot{5a89989 AssistPreviewPanel,ident = 305}
+11-04 21:02:59.491  1568  1588 D Surface : Surface::disconnect(this=0x7b16654e00,api=1)
+11-04 21:02:59.493   324  2193 I BufferQueueProducer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:886,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.496  2729 28272 D InputDispatcher: channel '439c4b2 AssistPreviewPanel (server)' ~ registerInputChannel - monitor=false
+11-04 21:02:59.496  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.496  2729 28272 D InputDispatcher: setInputWindows
+11-04 21:02:59.496  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.497  2729 29840 V WindowManager: Remove Window{8485b4 u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity} client=e90a287, surfaceController=Surface(name=bluerock.com.bluerock/bluerock.com.bluerock.MainActivity) Callers=com.android.server.wm.WindowManagerService.removeWindowLocked:2567 com.android.server.wm.WindowManagerService.removeWindow:2562 com.android.server.wm.Session.remove:205 android.view.IWindowSession$Stub.onTransact:242 
+11-04 21:02:59.497  2729 29840 D InputDispatcher: channel '8485b4 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity (server)' ~ unregisterInputChannel
+11-04 21:02:59.497  2729 29840 D InputDispatcher: channel '8485b4 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity (server)' ~ abortBrokenDispatchCycle - notify=false
+11-04 21:02:59.497  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.498  2729 29840 I WindowManager: Destroying surface Surface(name=bluerock.com.bluerock/bluerock.com.bluerock.MainActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2152 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:947 com.android.server.wm.WindowState.removeLocked:1482 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2750 com.android.server.wm.WindowManagerService.removeWindowLocked:2698 com.android.server.wm.WindowManagerService.removeWindowLocked:2567 com.android.server.wm.WindowManagerService.removeWindow:2562 com.android.server.wm.Session.remove:205 
+11-04 21:02:59.499  2729 29840 D InputDispatcher: setInputWindows
+11-04 21:02:59.499  2729 29840 D InputDispatcher: Focus left window: Window{8485b4 u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity}
+11-04 21:02:59.499  2729 29840 D InputDispatcher: Window went away: Window{8485b4 u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity}
+11-04 21:02:59.499  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.500  2729 29840 D InputDispatcher: setInputWindows
+11-04 21:02:59.500  2729 29840 V WindowManager: findFocusedWindow: No focusable windows.
+11-04 21:02:59.500  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.501  2729 29840 V WindowManager: Changing focus from Window{8485b4 u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity} to null Callers=com.android.server.wm.WindowManagerService.removeWindowLocked:2704 com.android.server.wm.WindowManagerService.removeWindowLocked:2567 com.android.server.wm.WindowManagerService.removeWindow:2562 com.android.server.wm.Session.remove:205 
+11-04 21:02:59.501  2729 29840 D WindowManager: Input focus has changed to null
+11-04 21:02:59.501  2729 29840 D InputDispatcher: setInputWindows
+11-04 21:02:59.501  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.502  1568  1568 D WindowClient: Remove from mViews: DecorView@969ab37[MainActivity], this = android.view.WindowManagerGlobal@7d9b3c9
+11-04 21:02:59.507   324   324 I BufferQueueConsumer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:3177,c:324) setDefaultBufferSize: width=1080 height=144
+11-04 21:02:59.507   324   324 I BufferQueueConsumer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:886,api:1,p:-1,c:-1) disconnect(C)
+11-04 21:02:59.507   324   324 I BufferQueue: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:886,api:1,p:-1,c:-1) ~BufferQueueCore
+11-04 21:02:59.508  2729 10181 D InputDispatcher: setInputWindows
+11-04 21:02:59.508  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.509  2729 10181 D InputDispatcher: setInputWindows
+11-04 21:02:59.509  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.509  2729 10181 D InputDispatcher: setInputWindows
+11-04 21:02:59.509  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.510  3177  3306 D Surface : Surface::disconnect(this=0x7af88c1000,api=1)
+11-04 21:02:59.510   324   503 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.511   324   503 I BufferQueueConsumer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:-1,c:324) getReleasedBuffers: returning mask 0xffffffffffffffff
+11-04 21:02:59.512  3177  3306 D Surface : Surface::disconnect(this=0x7af88c1000,api=1)
+11-04 21:02:59.512   324   500 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.512  3177  3306 D Surface : Surface::connect(this=0x7af88c1000,api=1)
+11-04 21:02:59.513   324   991 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:3177,c:324) connect(P): api=1 producer=(3177:com.android.systemui) producerControlledByApp=true
+11-04 21:02:59.513  3177  3306 W libEGL  : [ANDROID_RECORDABLE] format: 1
+11-04 21:02:59.514  3177  3306 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+11-04 21:02:59.518  3177  3177 D WindowClient: Add to mViews: com.android.systemui.assist.AssistOrbContainer{874d8e G.E...... ......I. 0,0-0,0}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.519  3177  3306 D OpenGLRenderer: CanvasContext() 0x7af72f8600
+11-04 21:02:59.520  3177  3177 D ViewRootImpl[AssistPreviewPanel]: hardware acceleration is enabled, this = ViewRoot{7dcf0c1 AssistPreviewPanel,ident = 306}
+11-04 21:02:59.522  2729 10947 D InputDispatcher: channel 'c84d780 AssistPreviewPanel (server)' ~ registerInputChannel - monitor=false
+11-04 21:02:59.522  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.522  2729 10947 D InputDispatcher: setInputWindows
+11-04 21:02:59.522  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.524   324   503 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:3177,c:324) new GraphicBuffer needed
+11-04 21:02:59.525  2729  3875 V WindowManager: findFocusedWindow: No focusable windows.
+11-04 21:02:59.527  2729  3875 D InputDispatcher: setInputWindows
+11-04 21:02:59.527  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.527  2729  3875 D InputDispatcher: setInputWindows
+11-04 21:02:59.527  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.528   324   503 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:3177,c:324) queueBuffer: fps=0.01 dur=162474.95 max=162225.87 min=249.08
+11-04 21:02:59.529   324  2193 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:3177,c:324) new GraphicBuffer needed
+11-04 21:02:59.544   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 144] 
+11-04 21:02:59.545  1568  1587 D OkHttp  : --> GET https://pixabay.com/api/?key=10583771-d9cdc2ef7dce85b4c6299413f/editors_choice=1
+11-04 21:02:59.546  1568  1587 D OkHttp  : --> END GET
+11-04 21:02:59.548  2261  2962 D FrameworkListener: dispatchCommand data = (getaddrinfo pixabay.com ^ 1024 0 1 0 0)
+11-04 21:02:59.549  2261  1629 D libc-netbsd: [getaddrinfo]: hostname=pixabay.com; servname=(null); netid=118; mark=118; ai_flags=1024; ai_family=0
+11-04 21:02:59.551  2261  1629 D libc-netbsd: default dns: query_ipv6=0, query_ipv4=1
+11-04 21:02:59.551  3177  3177 D WindowClient: Add to mViews: com.android.systemui.stackdivider.DividerView{270efa7 I.E...... ......I. 0,0-0,0}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.551  2261  1629 D libc-netbsd: res_queryN name = pixabay.com succeed
+11-04 21:02:59.551  2261  1629 D SocketClient: SocketClient sendData done: 222
+11-04 21:02:59.551  1568  1568 V PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = null, this = DecorView@5efc74f[]
+11-04 21:02:59.551  2261  1629 D SocketClient: SocketClient sendData done: 
+11-04 21:02:59.551  2261  1629 D SocketClient: SocketClient sendData done: 
+11-04 21:02:59.552  1568  1587 D libc-netbsd: getaddrinfo: pixabay.com get result from proxy gai_error = 0
+11-04 21:02:59.552  1568  1568 D WindowClient: Add to mViews: DecorView@5efc74f[MainActivity], this = android.view.WindowManagerGlobal@7d9b3c9
+11-04 21:02:59.553  3177  3306 D OpenGLRenderer: CanvasContext() 0x7af62405c0
+11-04 21:02:59.553  1568  1587 I System.out: [socket][1] connection pixabay.com/213.239.228.132:443;LocalPort=-1(10000)
+11-04 21:02:59.553  1568  1587 D         : [Posix_connect Debug]Process bluerock.com.bluerock :443 
+11-04 21:02:59.553  3177  3177 D ViewRootImpl[DockedStackDivider]: hardware acceleration is enabled, this = ViewRoot{6b2df43 DockedStackDivider,ident = 307}
+11-04 21:02:59.555  1568  1588 D OpenGLRenderer: CanvasContext() 0x7afa3b83c0
+11-04 21:02:59.556  2729 14615 D InputDispatcher: channel 'efb79fe DockedStackDivider (server)' ~ registerInputChannel - monitor=false
+11-04 21:02:59.556  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.556  1568  1568 D ViewRootImpl[MainActivity]: hardware acceleration is enabled, this = ViewRoot{d92ed0d bluerock.com.bluerock/bluerock.com.bluerock.MainActivity,ident = 2}
+11-04 21:02:59.556  2729 14615 D InputDispatcher: setInputWindows
+11-04 21:02:59.556  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.557  2729  2745 D InputDispatcher: channel 'f1febac bluerock.com.bluerock/bluerock.com.bluerock.MainActivity (server)' ~ registerInputChannel - monitor=false
+11-04 21:02:59.558  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.559  2729  2745 D InputDispatcher: setInputWindows
+11-04 21:02:59.559  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.560  3177  3177 V PhoneStatusBar: defineSlots
+11-04 21:02:59.560  2729  2745 D InputDispatcher: setInputWindows
+11-04 21:02:59.560  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.561  1568  1568 V PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = ViewRoot{d92ed0d bluerock.com.bluerock/bluerock.com.bluerock.MainActivity,ident = 2}, this = DecorView@5efc74f[MainActivity]
+11-04 21:02:59.561  2729  3873 D RunningBoosterService: [onActivityThreadResumedDone]
+11-04 21:02:59.563  3177  3177 V PhoneStatusBar: configuration changed: {1.0 ?mcc?mnc [en_AT] ldltr sw360dp w360dp h648dp 480dpi nrml long port finger qwerty/v/v -nav/h s.80}
+11-04 21:02:59.563  2729 32569 D InputDispatcher: setInputWindows
+11-04 21:02:59.563  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.565  1568  1568 V InputMethodManager: Not IME target window, ignoring
+11-04 21:02:59.568  3177  3177 D WindowClient: Add to mViews: com.android.systemui.assist.AssistOrbContainer{bedf6f9 G.E...... ......I. 0,0-0,0}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.570  3177  3306 D OpenGLRenderer: CanvasContext() 0x7af7497ac0
+11-04 21:02:59.570  3177  3177 D ViewRootImpl[AssistPreviewPanel]: hardware acceleration is enabled, this = ViewRoot{86d784a AssistPreviewPanel,ident = 308}
+11-04 21:02:59.572  2729  3871 D InputDispatcher: channel '691380a AssistPreviewPanel (server)' ~ registerInputChannel - monitor=false
+11-04 21:02:59.572  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.572  2729  3871 D InputDispatcher: setInputWindows
+11-04 21:02:59.572  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.584  2729  3085 D PerfServiceManager: [PerfService] MESSAGE_SET_UEVENT_INDEX: 6 
+11-04 21:02:59.600  3177  3177 D KeyguardUtils: getSubIdUsingPhoneId(phoneId = 0) = -2
+11-04 21:02:59.600  3177  3177 I EmergencyButton: subId = -2 , subIndex = 0
+11-04 21:02:59.602  3177  3177 I EmergencyButton: ss.getState() = 3 ss.isEmergencyOnly()=false for simId=0
+11-04 21:02:59.603  3177  3177 D KeyguardUtils: getSubIdUsingPhoneId(phoneId = 1) = -3
+11-04 21:02:59.604  3177  3177 I EmergencyButton: subId = -3 , subIndex = 1
+11-04 21:02:59.604  3177  3177 I EmergencyButton: ss.getState() = 1 ss.isEmergencyOnly()=true for simId=1
+11-04 21:02:59.604  3177  3177 D KeyguardSecurityModel: getSecurityMode() is called.
+11-04 21:02:59.604  3177  3177 D KeyguardSecurityModel: isPinPukOrMeRequiredOfSubId() - phoneId = 0, simState = ABSENT
+11-04 21:02:59.604  3177  3177 D KeyguardSecurityModel: isPinPukOrMeRequiredOfSubId() - phoneId = 1, simState = ABSENT
+11-04 21:02:59.604  3177  3177 D AntiTheftManager: getCurrentAntiTheftMode() is called.
+11-04 21:02:59.605  3177  3177 D KeyguardSecurityModel: getSecurityMode() - security = 196608
+11-04 21:02:59.605  3177  3177 D DefaultEmergencyButtonExt: showEccByServiceState i = 0 isServiceSupportEcc[i] = false
+11-04 21:02:59.605  3177  3177 D DefaultEmergencyButtonExt: showEccByServiceState i = 1 isServiceSupportEcc[i] = true
+11-04 21:02:59.605  3177  3177 I EmergencyButton: mLocateAtNonSecureView = true
+11-04 21:02:59.605  3177  3177 D DefaultEmergencyButtonExt: showEccInNonSecureUnlock return false
+11-04 21:02:59.605  3177  3177 I EmergencyButton: ECC Button is located on Notification Keygaurd and OP do not ask to show. So this is a normal case ,we never show it.
+11-04 21:02:59.605  3177  3177 I EmergencyButton: If the button is on NotificationKeyguard and will not show, we should just set it View.GONE to give more space to IndicationText.
+11-04 21:02:59.610  3177  3177 D PhoneStatusBar: setSystemUiVisibility vis=8608 mask=ffffffff oldVal=8608 newVal=8608 diff=0
+11-04 21:02:59.613  2729 29840 D InputDispatcher: channel 'f3166a7 AssistPreviewPanel (server)' ~ unregisterInputChannel
+11-04 21:02:59.613  2729 29840 D InputDispatcher: channel 'f3166a7 AssistPreviewPanel (server)' ~ abortBrokenDispatchCycle - notify=false
+11-04 21:02:59.613  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.615  2729 29840 D InputDispatcher: setInputWindows
+11-04 21:02:59.615  2729 29840 D InputDispatcher: Window went away: Window{f3166a7 u0 AssistPreviewPanel}
+11-04 21:02:59.615  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.615  2729 29840 D InputDispatcher: setInputWindows
+11-04 21:02:59.616  2729 29840 V WindowManager: findFocusedWindow: No focusable windows.
+11-04 21:02:59.616  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.616  3177  3177 D WindowClient: Remove from mViews: com.android.systemui.assist.AssistOrbContainer{d74fb60 G.E...... ......ID 0,0-2016,750}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.616  2729  3219 D InputDispatcher: channel '439c4b2 AssistPreviewPanel (server)' ~ unregisterInputChannel
+11-04 21:02:59.616  2729  3219 D InputDispatcher: channel '439c4b2 AssistPreviewPanel (server)' ~ abortBrokenDispatchCycle - notify=false
+11-04 21:02:59.617  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.618  2729  3219 D InputDispatcher: setInputWindows
+11-04 21:02:59.618  2729  3219 D InputDispatcher: Window went away: Window{439c4b2 u0 AssistPreviewPanel}
+11-04 21:02:59.618  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.618  2729  3219 D InputDispatcher: setInputWindows
+11-04 21:02:59.618  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.618  2729  3219 V WindowManager: findFocusedWindow: No focusable windows.
+11-04 21:02:59.619  3177  3177 D WindowClient: Remove from mViews: com.android.systemui.assist.AssistOrbContainer{52e224 G.E...... ......ID 0,0-1080,750}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.620   324   324 I BufferQueue: [unnamed-324-889](this:0x7a58cc0800,id:889,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:02:59.620   324   324 I BufferQueueConsumer: [unnamed-324-889](this:0x7a58cc0800,id:889,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:02:59.620   324   324 I BufferQueueConsumer: [unnamed-324-815](this:0x7a58cc0800,id:889,api:0,p:-1,c:324) setConsumerName: unnamed-324-815
+11-04 21:02:59.620   324   324 I BufferQueueConsumer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:0,p:-1,c:324) setConsumerName: bluerock.com.bluerock/bluerock.com.bluerock.MainActivity
+11-04 21:02:59.620   324   324 I BufferQueueProducer: [](this:0x7a58cc0800,id:889,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:02:59.620   324   324 I BufferQueueConsumer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:0,p:-1,c:324) setDefaultBufferSize: width=1080 height=2016
+11-04 21:02:59.621  2729 14615 V WindowManager: Changing focus from null to Window{f1febac u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity} Callers=com.android.server.wm.WindowManagerService.relayoutWindow:3210 com.android.server.wm.Session.relayout:227 android.view.IWindowSession$Stub.onTransact:286 com.android.server.wm.Session.onTransact:148 
+11-04 21:02:59.621  2729 14615 D WindowManager: Input focus has changed to Window{f1febac u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity}
+11-04 21:02:59.636   324   324 I BufferQueueConsumer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:0,p:-1,c:324) setDefaultBufferSize: width=1080 height=2160
+11-04 21:02:59.637  2729 14615 D InputDispatcher: setInputWindows
+11-04 21:02:59.637  2729 14615 D InputDispatcher: Focus entered window: Window{f1febac u0 bluerock.com.bluerock/bluerock.com.bluerock.MainActivity}
+11-04 21:02:59.637  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.638  2729 14615 D InputDispatcher: setInputWindows
+11-04 21:02:59.638  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.638  2729 14615 D InputDispatcher: setInputWindows
+11-04 21:02:59.638  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.639  1568  1568 D Surface : Surface::allocateBuffers(this=0x7b16654e00)
+11-04 21:02:59.639  1568  1588 D OpenGLRenderer: CanvasContext() 0x7afa3b83c0 initialize window=0x7b16654e00, title=bluerock.com.bluerock/bluerock.com.bluerock.MainActivity
+11-04 21:02:59.639  1568  1588 D Surface : Surface::connect(this=0x7b16654e00,api=1)
+11-04 21:02:59.639   324   503 I BufferQueueProducer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:1,p:1568,c:324) connect(P): api=1 producer=(1568:bluerock.com.bluerock) producerControlledByApp=true
+11-04 21:02:59.639  1568  1588 W libEGL  : [ANDROID_RECORDABLE] format: 1
+11-04 21:02:59.639  2729  2745 D InputDispatcher: setInputWindows
+11-04 21:02:59.640  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.640  2729  2745 D InputDispatcher: setInputWindows
+11-04 21:02:59.641  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.648  1568  1588 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+11-04 21:02:59.652  2729 25079 D InputDispatcher: setInputWindows
+11-04 21:02:59.652  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.652  2729 25079 D InputDispatcher: setInputWindows
+11-04 21:02:59.653  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.656  2729  3470 D InputDispatcher: setInputWindows
+11-04 21:02:59.656  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.686  1568  1588 D OpenGLRenderer: CacheTexture 3 upload: x, y, width height = 48, 0, 150, 331
+11-04 21:02:59.686   324  2193 I BufferQueueProducer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:1,p:1568,c:324) new GraphicBuffer needed
+11-04 21:02:59.700   324   500 I BufferQueueProducer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:1,p:1568,c:324) new GraphicBuffer needed
+11-04 21:02:59.706  1568  1588 D OpenGLRenderer: ~CanvasContext() 0x7b0f2631c0
+11-04 21:02:59.706  1568  1588 D OpenGLRenderer: ~CanvasContext() 0x7afa3d36c0
+11-04 21:02:59.708  1568  1568 V InputMethodManager: onWindowFocus: android.support.v7.widget.RecyclerView{ace77f8 VFED.V... .F....ID 0,0-1080,1776 #7f08007e app:id/recycler_view} softInputMode=272 first=true flags=#81810100
+11-04 21:02:59.709  2729  2781 D WindowManager: notifyActivityDrawnForKeyguard: waiting=false Callers=com.android.server.wm.WindowSurfacePlacer.handleAppTransitionReadyLocked:1249 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementInner:341 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementLoop:239 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:187 com.android.server.wm.WindowManagerService$H.handleMessage:8684 
+11-04 21:02:59.709  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:02:59.710  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.711   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 2160] 
+11-04 21:02:59.711  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:02:59.711  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.718  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:02:59.718  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.722   324   503 I BufferQueueProducer: [bluerock.com.bluerock/bluerock.com.bluerock.MainActivity](this:0x7a58cc0800,id:889,api:1,p:1568,c:324) new GraphicBuffer needed
+11-04 21:02:59.729   324   324 I BufferQueueConsumer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) setDefaultBufferSize: width=1080 height=72
+11-04 21:02:59.729   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 2160] 
+11-04 21:02:59.730  2729 28272 D InputDispatcher: setInputWindows
+11-04 21:02:59.730  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.732  2729 28272 D InputDispatcher: setInputWindows
+11-04 21:02:59.732  2729 28272 D InputDispatcher: setInputWindows
+11-04 21:02:59.732  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.732  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.734  1568  1587 I System.out: [socket][/192.168.1.18:53937] connected
+11-04 21:02:59.735  3177  3306 D Surface : Surface::disconnect(this=0x7b16654e00,api=1)
+11-04 21:02:59.735   324   503 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.736   324   503 I BufferQueueConsumer: [StatusBar](this:0x7a58646000,id:22,api:1,p:-1,c:324) getReleasedBuffers: returning mask 0xffffffffffffffff
+11-04 21:02:59.737  3177  3306 D Surface : Surface::disconnect(this=0x7b16654e00,api=1)
+11-04 21:02:59.737   324   500 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:-1,c:324) disconnect(P): api 1
+11-04 21:02:59.737  3177  3306 D Surface : Surface::connect(this=0x7b16654e00,api=1)
+11-04 21:02:59.737  1568  1587 D NativeCrypto: ssl=0x7b0a4493c0 NativeCrypto_SSL_do_handshake fd=0x7afc32cec8 shc=0x7afc32cecc timeout_millis=10000 client_mode=1 npn=0x0
+11-04 21:02:59.737  1568  1587 D NativeCrypto: ssl=0x7b0a4493c0 info_callback calling handshakeCompleted
+11-04 21:02:59.737   324  2193 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) connect(P): api=1 producer=(3177:com.android.systemui) producerControlledByApp=true
+11-04 21:02:59.737  3177  3306 W libEGL  : [ANDROID_RECORDABLE] format: 1
+11-04 21:02:59.738  3177  3306 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+11-04 21:02:59.803   324   503 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) new GraphicBuffer needed
+11-04 21:02:59.806   314   314 I wmt_launcher: fw log ctrl flag has been set
+11-04 21:02:59.807   314   314 I wmt_launcher: fw dynamic ctrl flag has been set
+11-04 21:02:59.808   324   991 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) new GraphicBuffer needed
+11-04 21:02:59.811  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:02:59.811  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.813  2729 14615 D InputDispatcher: setInputWindows
+11-04 21:02:59.813  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.813  2729 14615 D InputDispatcher: setInputWindows
+11-04 21:02:59.813  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.816   324   503 I BufferQueueProducer: [NavigationBar](this:0x7a5860c000,id:699,api:1,p:3177,c:324) new GraphicBuffer needed
+11-04 21:02:59.819  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:02:59.820  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.821  2729 10181 D InputDispatcher: setInputWindows
+11-04 21:02:59.821  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.821  2729 10181 D InputDispatcher: setInputWindows
+11-04 21:02:59.822  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.822   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 72] 
+11-04 21:02:59.822   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 144] 
+11-04 21:02:59.823  2729  3872 D InputDispatcher: channel '44cfc1 DockedStackDivider (server)' ~ unregisterInputChannel
+11-04 21:02:59.823  2729  3872 D InputDispatcher: channel '44cfc1 DockedStackDivider (server)' ~ abortBrokenDispatchCycle - notify=false
+11-04 21:02:59.823  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.824  2729  3872 D InputDispatcher: setInputWindows
+11-04 21:02:59.825  2729  3872 D InputDispatcher: Window went away: Window{44cfc1 u0 DockedStackDivider}
+11-04 21:02:59.825  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.825  2729  3872 D InputDispatcher: setInputWindows
+11-04 21:02:59.825  2729  3053 D InputDispatcher: Dispatch frozen.  Waiting some more.
+11-04 21:02:59.826  3177  3177 D WindowClient: Remove from mViews: com.android.systemui.stackdivider.DividerView{e2131eb I.E...... ......ID 0,0-144,0}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.827  2729  2781 I WindowManager: Screen frozen for +454ms due to Window{1a1e84d u0 NavigationBar}
+11-04 21:02:59.827  2729  2781 V WindowManager: Dismiss!
+11-04 21:02:59.854   324   324 I BufferQueue: [unnamed-324-890](this:0x7a58d16000,id:890,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:02:59.854   324   324 I BufferQueueConsumer: [unnamed-324-890](this:0x7a58d16000,id:890,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:02:59.854   324   324 I BufferQueueConsumer: [unnamed-324-816](this:0x7a58d16000,id:890,api:0,p:-1,c:324) setConsumerName: unnamed-324-816
+11-04 21:02:59.854   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a58d16000,id:890,api:0,p:-1,c:324) setConsumerName: BlackSurface
+11-04 21:02:59.854   324   324 I BufferQueueProducer: [](this:0x7a58d16000,id:890,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:02:59.856   324   324 I BufferQueue: [unnamed-324-891](this:0x7a58dca000,id:891,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:02:59.856   324   324 I BufferQueueConsumer: [unnamed-324-891](this:0x7a58dca000,id:891,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:02:59.856   324   324 I BufferQueueConsumer: [unnamed-324-817](this:0x7a58dca000,id:891,api:0,p:-1,c:324) setConsumerName: unnamed-324-817
+11-04 21:02:59.856   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a58dca000,id:891,api:0,p:-1,c:324) setConsumerName: BlackSurface
+11-04 21:02:59.856   324   324 I BufferQueueProducer: [](this:0x7a58dca000,id:891,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:02:59.857   324   324 I BufferQueue: [unnamed-324-892](this:0x7a58dcb800,id:892,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:02:59.858   324   324 I BufferQueueConsumer: [unnamed-324-892](this:0x7a58dcb800,id:892,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:02:59.858   324   324 I BufferQueueConsumer: [unnamed-324-818](this:0x7a58dcb800,id:892,api:0,p:-1,c:324) setConsumerName: unnamed-324-818
+11-04 21:02:59.858   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a58dcb800,id:892,api:0,p:-1,c:324) setConsumerName: BlackSurface
+11-04 21:02:59.858   324   324 I BufferQueueProducer: [](this:0x7a58dcb800,id:892,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:02:59.860   324   324 I BufferQueue: [unnamed-324-893](this:0x7a586a1000,id:893,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:02:59.860   324   324 I BufferQueueConsumer: [unnamed-324-893](this:0x7a586a1000,id:893,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:02:59.860   324   324 I BufferQueueConsumer: [unnamed-324-819](this:0x7a586a1000,id:893,api:0,p:-1,c:324) setConsumerName: unnamed-324-819
+11-04 21:02:59.860   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a586a1000,id:893,api:0,p:-1,c:324) setConsumerName: BlackSurface
+11-04 21:02:59.860   324   324 I BufferQueueProducer: [](this:0x7a586a1000,id:893,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:02:59.862  2729  2781 D InputDispatcher: setInputDispatchMode: enabled=1, frozen=0
+11-04 21:02:59.862  2729  2781 D InputDispatcher: Resetting ANR timeouts.
+11-04 21:02:59.862  2729  3053 D InputDispatcher: Resetting ANR timeouts.
+11-04 21:02:59.862  2729  3053 D InputDispatcher: dispatchDeviceReset - eventTime=53201459137092, deviceId=1
+11-04 21:02:59.862  2729  3053 D InputDispatcher: Resetting ANR timeouts.
+11-04 21:02:59.862  2729  2781 D PowerManagerNotifier: onWakeLockReleased: flags=1, tag="SCREEN_FROZEN", packageName=android, ownerUid=1000, ownerPid=2729, workSource=null
+11-04 21:02:59.862  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:02:59.863  2729 32569 D InputDispatcher: channel 'c84d780 AssistPreviewPanel (server)' ~ unregisterInputChannel
+11-04 21:02:59.863  2729 32569 D InputDispatcher: channel 'c84d780 AssistPreviewPanel (server)' ~ abortBrokenDispatchCycle - notify=false
+11-04 21:02:59.864  2729 32569 D InputDispatcher: setInputWindows
+11-04 21:02:59.864  2729 32569 D InputDispatcher: Window went away: Window{c84d780 u0 AssistPreviewPanel}
+11-04 21:02:59.865  2729 32569 D InputDispatcher: setInputWindows
+11-04 21:02:59.866  3177  3177 D WindowClient: Remove from mViews: com.android.systemui.assist.AssistOrbContainer{874d8e G.E...... ......ID 0,0-1080,750}, this = android.view.WindowManagerGlobal@8dc428f
+11-04 21:02:59.868  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:02:59.873   324  2193 I BufferQueueProducer: [StatusBar](this:0x7a58646000,id:22,api:1,p:3177,c:324) new GraphicBuffer needed
+11-04 21:02:59.877   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 72] 
+11-04 21:02:59.892  3177  3306 D OpenGLRenderer: ~CanvasContext() 0x7af72f8600
+11-04 21:02:59.892  3177  3306 D OpenGLRenderer: ~CanvasContext() 0x7af6388a00
+11-04 21:02:59.894  3177  3306 D OpenGLRenderer: ~CanvasContext() 0x7b0f36dd40
+11-04 21:02:59.894  3177  3306 D OpenGLRenderer: ~CanvasContext() 0x7af83e0c00
+11-04 21:02:59.894  3177  3306 D OpenGLRenderer: ~CanvasContext() 0x7af724a400
+11-04 21:02:59.894  3177  3306 D OpenGLRenderer: ~CanvasContext() 0x7af63cb500
+11-04 21:02:59.908  2729  3048 D LIGHT   : [ALS]>>en:1,cnt:85,EV_ABS event:code,0;value,40
+11-04 21:02:59.908  2729  3048 E PROXIMITY: ProximitySensor: unknown event (type=3, code=0)
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: onSensorChanged: mLightSensorEnabled=true, mAmbientLuxValid=true
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: updateAmbientLux: mAmbientLuxValid=true, AAL=true
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: [0, 100]: lux=40.0, weight=1005000.0
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: [-500, 0]: lux=90.0, weight=4875000.0
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: calculateAmbientLux: totalWeight=5880000.0, newAmbientLux=81.45409
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: updateAmbientLux: ambientLux=81.45409, timeToBrighten=2500, timeToDarken=2500, current=145.0
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: updateAmbientLux: Scheduling ambient lux update for 5320444053204440 (in 2499 ms)
+11-04 21:02:59.909  2729  2788 D AutomaticBrightnessController: onSensorChanged: lux = 40.0
+11-04 21:02:59.943  1568  1587 D NativeCrypto: ssl=0x7b0a4493c0 cert_verify_callback => 1
+11-04 21:02:59.980  2234  2380 D AALService: enableAALEvent: 0 -> 1
+11-04 21:02:59.980  2234  2380 D AALService: Output backlight = 336/1023, CABC gain = 256
+11-04 21:02:59.999  2729  3051 D AlarmManager: set alarm to RTC 168280522
+11-04 21:03:00.000  2729  3051 D DataShapingService: Alarm manager openLteDataUpLinkGate: false
+11-04 21:03:00.000  2729  3051 V AlarmManager: openLteGateSuccess = false
+11-04 21:03:00.001  2729  3051 V AlarmManager: sending alarm Alarm{d12cad6 type 3 when 168255956 android} success
+11-04 21:03:00.001  2729  3051 D PowerManagerNotifier: onWakeLockAcquired: flags=1073741825, tag="*alarm*", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{1000}
+11-04 21:03:00.001  2729  2729 V AlarmManager: mSupportAlarmGrouping = true  mAmPlus = com.mediatek.amplus.AlarmManagerPlus@b30593e
+11-04 21:03:00.001  2729  2729 V aeonHandleSetAlarm: aeonHandleService isScreenOn=true, return
+11-04 21:03:00.001  2729  2729 V AlarmManager: APP set(PendingIntent{35c2674: PendingIntentRecord{3abe79d android broadcastIntent}}) : type=3 triggerAtTime=168315957 win=0 tElapsed=168315957 maxElapsed=168315957 interval=0 flags=0x1
+11-04 21:03:00.002  2729  2729 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=8f24661
+11-04 21:03:00.003  3177  3177 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+11-04 21:03:00.003  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=5df1d26
+11-04 21:03:00.003  3177  3177 D KeyguardUpdateMonitor: handleTimeUpdate
+11-04 21:03:00.003  2729  3875 D AlarmManager: getNextAlarmClockImpl is called before Lock 
+11-04 21:03:00.003  2729  3875 D AlarmManager: getNextAlarmClockImpl is called in Lock 
+11-04 21:03:00.010  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=9b26080
+11-04 21:03:00.012  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=d5a46b9
+11-04 21:03:00.028  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=d12aafe
+11-04 21:03:00.030  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=f80625f
+11-04 21:03:00.032  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=c1d04ac
+11-04 21:03:00.036  2234  2380 D AALService: Output backlight = 335/1023, CABC gain = 256
+11-04 21:03:00.044   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[1080 72] 
+11-04 21:03:00.049  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=8cf9575
+11-04 21:03:00.066  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=d6a790a
+11-04 21:03:00.090  3177  3177 D ActivityThread: BDC-Calling finishReceiver: IIntentReceiver=ef2c57b
+11-04 21:03:00.091  2729  2729 D AlarmManager: onSendFinished begin
+11-04 21:03:00.091  2729  2729 D PowerManagerNotifier: onWakeLockReleased: flags=1073741825, tag="*alarm*", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{1000}
+11-04 21:03:00.091  2234  2380 D AALService: Output backlight = 336/1023, CABC gain = 256
+11-04 21:03:00.130  1568  1587 D NativeCrypto: ssl=0x7b0a4493c0 info_callback calling handshakeCompleted
+11-04 21:03:00.130  1568  1587 D NativeCrypto: ssl=0x7b0a4493c0 NativeCrypto_SSL_get_certificate => NULL
+11-04 21:03:00.130  1568  1587 I System.out: gba_cipher_suite:TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+11-04 21:03:00.147  2234  2380 D AALService: Output backlight = 337/1023, CABC gain = 256
+11-04 21:03:00.209  3177  3177 D NetworkController.WifiSignalController: Change in state from: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=false,activityOut=false,rssi=-77,lastModified=11-04 09:02:59,ssid="ASUS"
+11-04 21:03:00.209  3177  3177 D NetworkController.WifiSignalController: 	to: connected=true,enabled=true,level=2,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=true,activityOut=true,rssi=-77,lastModified=11-04 09:02:59,ssid="ASUS"
+11-04 21:03:00.267   324   324 I DisplayDevice: [Built-in Screen (type:0)] fps:40.284969,dur:1017.75,max:151.97,min:2.09
+11-04 21:03:00.303  2729  2781 I WindowManager:   FREEZE Surface(name=ScreenshotSurface): DESTROY
+11-04 21:03:00.305  2729  3085 I libPerfService: 5: set: -1, -1, -1, 
+11-04 21:03:00.306  2729  3085 I libPerfService: 5: set freq: -1, -1, -1, 
+11-04 21:03:00.320  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:03:00.322   324   324 I BufferQueueConsumer: [ScreenshotSurface](this:0x7a5877a000,id:888,api:1,p:-1,c:-1) disconnect(C)
+11-04 21:03:00.322   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a58d16000,id:890,api:0,p:-1,c:-1) disconnect(C)
+11-04 21:03:00.322   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a58dca000,id:891,api:0,p:-1,c:-1) disconnect(C)
+11-04 21:03:00.322   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a58dcb800,id:892,api:0,p:-1,c:-1) disconnect(C)
+11-04 21:03:00.322   324   324 I BufferQueueConsumer: [BlackSurface](this:0x7a586a1000,id:893,api:0,p:-1,c:-1) disconnect(C)
+11-04 21:03:00.322   324   324 I BufferQueue: [ScreenshotSurface](this:0x7a5877a000,id:888,api:1,p:-1,c:-1) ~BufferQueueCore
+11-04 21:03:00.322   324   324 I BufferQueue: [BlackSurface](this:0x7a58d16000,id:890,api:0,p:-1,c:-1) ~BufferQueueCore
+11-04 21:03:00.322   324   324 I BufferQueue: [BlackSurface](this:0x7a58dca000,id:891,api:0,p:-1,c:-1) ~BufferQueueCore
+11-04 21:03:00.322   324   324 I BufferQueue: [BlackSurface](this:0x7a58dcb800,id:892,api:0,p:-1,c:-1) ~BufferQueueCore
+11-04 21:03:00.322   324   324 I BufferQueue: [BlackSurface](this:0x7a586a1000,id:893,api:0,p:-1,c:-1) ~BufferQueueCore
+11-04 21:03:00.327  1568  1587 D OkHttp  : <-- 400 Bad Request https://pixabay.com/api/?key=10583771-d9cdc2ef7dce85b4c6299413f/editors_choice=1 (781ms)
+11-04 21:03:00.327  1568  1587 D OkHttp  : Server: nginx/1.10.3
+11-04 21:03:00.327  1568  1587 D OkHttp  : Date: Mon, 05 Nov 2018 05:02:53 GMT
+11-04 21:03:00.327  1568  1587 D OkHttp  : Content-Type: text/html; charset=utf-8
+11-04 21:03:00.327  1568  1587 D OkHttp  : Content-Length: 64
+11-04 21:03:00.327  1568  1587 D OkHttp  : Connection: keep-alive
+11-04 21:03:00.327  1568  1587 D OkHttp  : Vary: Accept-Language, Cookie
+11-04 21:03:00.327  1568  1587 D OkHttp  : Content-Language: en
+11-04 21:03:00.327  1568  1587 D OkHttp  : Set-Cookie: sessionid="eyJfbGFuZ3VhZ2UiOiJlbiJ9:1gJX2L:Qlc5rn3Wn81zYaIS0ptlWqg0VxE"; expires=Mon, 19-Nov-2018 05:02:53 GMT; httponly; Max-Age=1209600; Path=/
+11-04 21:03:00.330  1568  1587 D OkHttp  : [ERROR 400] Invalid API key. Note: This value is case-sensitive.
+11-04 21:03:00.330  1568  1587 D OkHttp  : <-- END HTTP (64-byte body)
+11-04 21:03:00.336  2729 14615 I NotificationService: enqueueToast pkg=bluerock.com.bluerock callback=android.app.ITransientNotification$Stub$Proxy@251c157 duration=0
+11-04 21:03:00.340  2729 14615 D NotificationService: Show pkg=bluerock.com.bluerock callback=android.app.ITransientNotification$Stub$Proxy@251c157
+11-04 21:03:00.342  1568  1568 D WindowClient: Add to mViews: android.widget.LinearLayout{2f3aecf V.E...... ......I. 0,0-0,0}, this = android.view.WindowManagerGlobal@7d9b3c9
+11-04 21:03:00.344  1568  1588 D OpenGLRenderer: CanvasContext() 0x7afa3d36c0
+11-04 21:03:00.344  1568  1568 D ViewRootImpl[Toast]: hardware acceleration is enabled, this = ViewRoot{72668eb Toast,ident = 3}
+11-04 21:03:00.346  2729 30124 D InputDispatcher: channel 'c48be62 Toast (server)' ~ registerInputChannel - monitor=false
+11-04 21:03:00.346  2729 30124 D AppOps  : startOperation: allowing code 45 uid 10119 package bluerock.com.bluerock
+11-04 21:03:00.347  2729 30124 D InputDispatcher: setInputWindows
+11-04 21:03:00.365   324   324 I BufferQueue: [unnamed-324-894](this:0x7a586a1000,id:894,api:0,p:-1,c:-1) BufferQueue core=(324:/system/bin/surfaceflinger)
+11-04 21:03:00.365   324   324 I BufferQueueConsumer: [unnamed-324-894](this:0x7a586a1000,id:894,api:0,p:-1,c:324) connect(C): consumer=(324:/system/bin/surfaceflinger) controlledByApp=false
+11-04 21:03:00.365   324   324 I BufferQueueConsumer: [unnamed-324-820](this:0x7a586a1000,id:894,api:0,p:-1,c:324) setConsumerName: unnamed-324-820
+11-04 21:03:00.365   324   324 I BufferQueueConsumer: [Toast](this:0x7a586a1000,id:894,api:0,p:-1,c:324) setConsumerName: Toast
+11-04 21:03:00.365   324   324 I BufferQueueProducer: [](this:0x7a586a1000,id:894,api:0,p:-1,c:324) setMaxDequeuedBufferCount: maxDequeuedBuffers = 2
+11-04 21:03:00.365   324   324 I BufferQueueConsumer: [Toast](this:0x7a586a1000,id:894,api:0,p:-1,c:324) setDefaultBufferSize: width=1 height=1
+11-04 21:03:00.377   324   324 I BufferQueueConsumer: [Toast](this:0x7a586a1000,id:894,api:0,p:-1,c:324) setDefaultBufferSize: width=588 height=132
+11-04 21:03:00.378  2729 25079 D InputDispatcher: setInputWindows
+11-04 21:03:00.380  2729 25079 D InputDispatcher: setInputWindows
+11-04 21:03:00.380  2729 25079 D InputDispatcher: setInputWindows
+11-04 21:03:00.381  1568  1588 D OpenGLRenderer: CanvasContext() 0x7afa3d36c0 initialize window=0x7b16655c00, title=Toast
+11-04 21:03:00.381  1568  1568 D Surface : Surface::allocateBuffers(this=0x7b16655c00)
+11-04 21:03:00.382  1568  1588 D Surface : Surface::connect(this=0x7b16655c00,api=1)
+11-04 21:03:00.382   324  2193 I BufferQueueProducer: [Toast](this:0x7a586a1000,id:894,api:1,p:1568,c:324) connect(P): api=1 producer=(1568:bluerock.com.bluerock) producerControlledByApp=true
+11-04 21:03:00.382  1568  1588 W libEGL  : [ANDROID_RECORDABLE] format: 1
+11-04 21:03:00.384  1568  1588 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+11-04 21:03:00.388  2729  3064 D WifiStateMachine:  ConnectedState !CMD_RSSI_POLL  rt=53202419/168256343 44 0 "ASUS" ac:9e:17:ab:34:78 rssi=-73 f=5805 sc=56 link=87 tx=3,2, 0,0, 0,0  rx=4,1 bcn=0 [on:0 tx:0 rx:0 period:2999] from screen [on:0 period:-499078876] gl hn rssi=-68 ag=0 ls-=0 [56,56,56,56,56] brc=0 lrc=0 offload-stopped
+11-04 21:03:00.389  2729  3064 D WifiStateMachine:  L2ConnectedState !CMD_RSSI_POLL  rt=53202420/168256345 44 0 "ASUS" ac:9e:17:ab:34:78 rssi=-73 f=5805 sc=56 link=87 tx=3,2, 0,0, 0,0  rx=4,1 bcn=0 [on:0 tx:0 rx:0 period:1] from screen [on:0 period:-499078875] gl hn rssi=-68 ag=0 ls-=0 [56,56,56,56,56] brc=0 lrc=0 offload-stopped
+11-04 21:03:00.390  2729  3064 D WifiStateMachine:  get link layer stats 0
+11-04 21:03:00.390  2729  3064 D WifiHW  : enter -->wifi_send_command cmd=IFNAME=wlan0 SIGNAL_POLL
+11-04 21:03:00.392  2729  3064 D WifiHW  : leave --> reply=RSSI=-76
+11-04 21:03:00.392  2729  3064 D WifiHW  : LINKSPEED=87
+11-04 21:03:00.392  2729  3064 D WifiHW  : NOISE=9999
+11-04 21:03:00.392  2729  3064 D WifiHW  : FREQUENCY=5805
+11-04 21:03:00.392  2729  3064 D WifiHW  : 000000000000000000000000000000007f0800000f0200000040bf0cb2018033eaff0000eaff0000c005012a00fcffc30402c4c4c4dd180050f2020101840003a4000027a4000042435e0062322f00dd0900037f01010000ff7fdd1a0050f20101000050f20202000050f2040050f20201000050f20230180100000fac020200000fac04000fac020100000fac020000
+11-04 21:03:00.392  2729  3064 D WifiHW  : flags=[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]
+11-04 21:03:00.392  2729  3064 D WifiHW  : ssid=
+11-04 21:03:00.392  2729  3064 D WifiHW  : ####
+11-04 21:03:00.392  2729  3064 D WifiStateMachine: fetchRssiLinkSpeedAndFrequencyNative rssi=-76 linkspeed=87 freq=5805
+11-04 21:03:00.392  2729  3064 D WifiStateMachine: mLastSignalLevel:2, newSignalLevel:2
+11-04 21:03:00.393  2729  3064 D WifiConfigManager: updateConfiguration freq=5805 BSSID=ac:9e:17:ab:34:78 RSSI=-76 "ASUS"WPA_PSK
+11-04 21:03:00.393  2729  3064 D WifiStateMachine: calculateWifiScore freq=5805 speed=87 score=56 -> txbadrate=0,00 txgoodrate=6,10 txretriesrate=0,00 rxrate=6,07 userTriggerdPenalty0
+11-04 21:03:00.394  2729  3064 D WifiStateMachine:  good link -> stuck count =0
+11-04 21:03:00.394  2729  3064 D WifiStateMachine:  badRSSI count0 lowRSSI count0 --> score 60
+11-04 21:03:00.394  2729  3064 D WifiStateMachine: calculateWifiScore() report new score 60
+11-04 21:03:00.394  2729  3105 D Ethernet: new score 60 for exisiting request NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+11-04 21:03:00.394  2729  3105 D Ethernet:   my score=-1, my filter=[ Transports: ETHERNET Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN LinkUpBandwidth>=100000Kbps LinkDnBandwidth>=100000Kbps]
+11-04 21:03:00.395  2729  3105 D Ethernet: evalRequest request = NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with requested = false
+11-04 21:03:00.395  2729  3105 D Ethernet:   done
+11-04 21:03:00.395  3423  3423 D PhoneSwitcherNetworkRequstListener: new score 60 for exisiting request NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+11-04 21:03:00.395  3423  3423 D PhoneSwitcherNetworkRequstListener:   my score=101, my filter=[ Transports: CELLULAR Capabilities: MMS&SUPL&DUN&FOTA&IMS&CBS&IA&RCS&XCAP&EIMS&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&BIP Specifier: <*>]
+11-04 21:03:00.395  3423  3423 D PhoneSwitcherNetworkRequstListener: evalRequest request = NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with requested = true
+11-04 21:03:00.395  2729  3064 D WIFI_UT : new score 60 for exisiting request NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+11-04 21:03:00.395  3423  3423 D PhoneSwitcherNetworkRequstListener:   done
+11-04 21:03:00.395  2729  3064 D WIFI_UT :   my score=2147483647, my filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps]
+11-04 21:03:00.395  2729  3064 D WIFI_UT : evalRequest request = NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with requested = true
+11-04 21:03:00.396  2729  3064 D WIFI_UT :   done
+11-04 21:03:00.396  2729  3064 D WIFI    : new score 60 for exisiting request NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+11-04 21:03:00.396  2729  3064 D WIFI    :   my score=60, my filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps]
+11-04 21:03:00.397  2729  3064 D WIFI    : evalRequest request = NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with requested = true
+11-04 21:03:00.397  2729  3064 D WIFI    :   done
+11-04 21:03:00.400   324  2193 I BufferQueueProducer: [Toast](this:0x7a586a1000,id:894,api:1,p:1568,c:324) new GraphicBuffer needed
+11-04 21:03:00.409   324   991 I BufferQueueProducer: [Toast](this:0x7a586a1000,id:894,api:1,p:1568,c:324) new GraphicBuffer needed
+11-04 21:03:00.415  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:03:00.415   324   324 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 0 0  img[588 132] 
+11-04 21:03:00.418  2729  2781 D InputDispatcher: setInputWindows
+11-04 21:03:00.418  2729  2781 D PowerManagerNotifier: onWakeLockAcquired: flags=536870922, tag="WindowManager", packageName=android, ownerUid=1000, ownerPid=2729, workSource=WorkSource{10119}
+11-04 21:03:00.472  1992  1999 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:03:00.740  2234  2380 D AALService: enableAALEvent: 1 -> 0
+11-04 21:03:00.866  2241  2241 I thermal_repeater: oh, queryMdThermalInfo (0)No such file or directory
+11-04 21:03:00.869  1992  1996 I PerfService: PerfServiceNative_getLastBoostPid err:-129
+11-04 21:03:00.882  2234  2385 D AALLightSensor: newLux = 40, [40, 49] -> 144
+11-04 21:03:00.884  2241  2241 I thermal_repeater: [recvMdThermalInfo] ret=28, strLen=127,  2, 32767, -127, 0, 32767, 1
+11-04 21:03:00.976  2729  2781 D InputDispatcher: setInputWindows
