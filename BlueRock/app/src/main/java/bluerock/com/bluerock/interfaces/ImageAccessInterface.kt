@@ -1,4 +1,4 @@
-package bluerock.com.bluerock.server
+package bluerock.com.bluerock.interfaces
 
 import io.reactivex.Observable
 import retrofit2.http.GET

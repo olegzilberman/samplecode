@@ -17,7 +17,7 @@ class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>() {
             itemView.findViewById<TextView>(R.id.image_name).text = itemDetail.imageName
             itemView.findViewById<TextView>(R.id.like_count).text = itemDetail.like_count.toString()
             val item = itemView.findViewById<ImageView>(R.id.photo_item)
-            if (item.tag == null || !item.tag.equals(itemDetail.imageUrl)) {
+            if (item.tag == null || item.tag != itemDetail.imageUrl) {
                 item.tag = itemDetail.imageUrl
                 Picasso.get()
                     .load(itemDetail.imageUrl)

@@ -15,7 +15,8 @@ class NetworkService(base:String) {
     val logging = HttpLoggingInterceptor()
     var baseUrl:String
     init {
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        //Minimum log output for http calls
+        logging.level = HttpLoggingInterceptor.Level.NONE
         httpClient.addInterceptor(logging)
         baseUrl = base
 

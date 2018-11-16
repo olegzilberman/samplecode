@@ -1,5 +1,6 @@
 package bluerock.com.bluerock.server
 
+import bluerock.com.bluerock.interfaces.ImageAccessInterface
 import retrofit2.Retrofit
 import retrofit2.Retrofit.Builder
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -15,7 +16,7 @@ class ImageDownloader(base:String) {
     val logging = HttpLoggingInterceptor()
     var baseUrl:String
     init {
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        logging.level = HttpLoggingInterceptor.Level.BODY;
         httpClient.addInterceptor(logging)
         baseUrl = base
 

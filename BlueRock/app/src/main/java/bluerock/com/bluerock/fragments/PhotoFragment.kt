@@ -25,13 +25,13 @@ private const val PHOTO_URL = "param1"
  *
  */
 class PhotoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var photo_url: String? = null
+    private var photoUrl: String? = null
     private var listener: OnFragmentInteractionListener? = null
+    private lateinit var mainView:View
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            photo_url = it.getString(PHOTO_URL)
+        arguments?.let {bundle ->
+            photoUrl = bundle.getString(PHOTO_URL)
         }
     }
 
@@ -40,13 +40,16 @@ class PhotoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val mainView = inflater.inflate(R.layout.fragment_photo, container, false)
-        Picasso.get().load(photo_url).fit()
+        mainView = inflater.inflate(R.layout.fragment_photo, container, false)
+        Picasso.get()
+            .load(photoUrl)
+            .noPlaceholder()
+            .fit()
+            .centerInside()
             .into( mainView.findViewById<ImageView>(R.id.fragment_image));
         return mainView
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
