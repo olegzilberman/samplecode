@@ -1,5 +1,7 @@
 package bluestone.com.bluestone
 
+import android.content.Intent
+import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -8,6 +10,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import bluestone.com.bluestone.`cache-manager`.CacheManager
 import bluestone.com.bluestone.`data-model`.FragmentCreationDescriptor
 import bluestone.com.bluestone.fragments.PhotoFragment
 import bluestone.com.bluestone.fragments.RecyclerViewFragment
@@ -16,7 +19,9 @@ import io.reactivex.disposables.Disposables
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_main.*
-private lateinit var fragmentCallback: PublishSubject<FragmentCreationDescriptor>
+
+
+private var fragmentCallback  = PublishSubject.create<FragmentCreationDescriptor>()
 
 class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionListener {
 
@@ -26,17 +31,36 @@ class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionLis
 
     private var disposable = Disposables.disposed()
     private lateinit var firstFragment: FragmentCreationInterface
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        if (savedInstanceState == null)
+            initFragmentCallback()
+    }
 
-        initFragmentCallback()
+    override fun onConfigurationChanged(newConfig: Configuration?) {
+        super.onConfigurationChanged(newConfig)
+    }
+    private fun cleanDB() {
+        CacheManager.deleteDB()
     }
 
     private fun initFragmentCallback(){
-        fragmentCallback = PublishSubject.create()
+        firstFragment = RecyclerViewFragment.newInstance(fragmentCallback)
+        displayNextFragment(firstFragment.fragment())
+    }
+
+    private fun displayNextFragment(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun onStart() {
+        super.onStart()
         disposable = fragmentCallback.subscribeWith(object : DisposableObserver<FragmentCreationDescriptor>() {
             override fun onComplete() {}
             override fun onNext(fragmentDescriptor: FragmentCreationDescriptor) {
@@ -47,17 +71,7 @@ class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionLis
                 Log.e("MainActivity", e.localizedMessage)
             }
         })
-        firstFragment = RecyclerViewFragment.newInstance(fragmentCallback)
-        displayNextFragment(firstFragment.fragment())
     }
-    private fun displayNextFragment(fragment: Fragment) {
-                                                                        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
-
     override fun onStop() {
         super.onStop()
         disposable.dispose()
@@ -74,7 +88,18 @@ class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionLis
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                cleanDB()
+                val intent = baseContext.packageManager
+                    .getLaunchIntentForPackage(baseContext.packageName)
+                intent?.run{
+                    addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    startActivity(intent)
+                }
+
+                Toast.makeText(applicationContext, "database deleted", Toast.LENGTH_SHORT).show()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

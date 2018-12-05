@@ -1,4 +1,5 @@
 package bluestone.com.bluestone.`recyclerview-adapters`
+
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -7,27 +8,24 @@ import android.widget.ImageView
 import android.widget.TextView
 import bluestone.com.bluestone.R
 import bluestone.com.bluestone.`item-detail`.ItemDetail
-import bluestone.com.bluestone.utilities.printLog
 import com.squareup.picasso.Picasso
 
 class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>() {
     private val itemList = ArrayList<ItemDetail>()
+
     inner class PhotoHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(itemDetail: ItemDetail){
+        fun bind(itemDetail: ItemDetail) {
             itemView.findViewById<TextView>(R.id.author_name).text = itemDetail.authorName
             itemView.findViewById<TextView>(R.id.image_name).text = itemDetail.imageName
             itemView.findViewById<TextView>(R.id.like_count).text = itemDetail.like_count.toString()
             val item = itemView.findViewById<ImageView>(R.id.photo_item)
             if (item.tag == null || item.tag != itemDetail.imageUrl) {
-                printLog("url = ${itemDetail.imageUrl}")
                 item.tag = itemDetail.imageUrl
                 Picasso.get()
                     .load(itemDetail.imageUrl)
                     .noPlaceholder()
                     .fit()
                     .into(itemView.findViewById<ImageView>(R.id.photo_item))
-            } else {
-                printLog("item.tag = ${item.tag}")
             }
         }
     }
@@ -47,16 +45,24 @@ class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>() {
         return itemList.size
     }
 
-    fun updateEndOfList(newItems: List<ItemDetail>){
+    //TODO:OZ as written, the itemList will grow unbounded. Need to add code that maintains a forward and backword fetch buffer
+    //that is updated via notify notifyDataSetRange inserted/removed.
+    fun updateEndOfList(newItems: List<ItemDetail>) {
         itemList.addAll(newItems)
-        notifyItemInserted(itemList.size-1)
+        notifyItemInserted(itemList.size - 1)
     }
-    fun update(newItems:List<ItemDetail>){
+
+    fun update(newItems: List<ItemDetail>) {
         itemList.clear()
         itemList.addAll(newItems)
         notifyDataSetChanged()
     }
-    fun getItemDetailByPosition(index:Int) : ItemDetail {
+
+    fun getItemDetailByPosition(index: Int): ItemDetail {
         return itemList[index]
+    }
+
+    fun getAllItems(): List<ItemDetail> {
+        return itemList.toMutableList()
     }
 }
