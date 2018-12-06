@@ -13,8 +13,8 @@ interface NetworkApi {
                                  @Path("image_type")image_type:String,
                                  @Path("category")category:String) : Observable<PhotoDataModel>
     @GET("?key=10583771-d9cdc2ef7dce85b4c6299413f&editors_choice=1")
-    fun fetchAll(@Query("per_page") count:Int) : Single<PhotoDataModel>
+    fun fetchAll(@Query("per_page") per_page:Int) : Single<PhotoDataModel>
 
     @GET("?key=10583771-d9cdc2ef7dce85b4c6299413f&editors_choice=1")
-    fun fetchNextPage(@Query("page") page:Int, @Query("per_page") count:Int) : Observable<PhotoDataModel>
+    fun fetchNextPage(@Query("page") page:Int, @Query("per_page") per_page:Int) : Observable<PhotoDataModel>
 }

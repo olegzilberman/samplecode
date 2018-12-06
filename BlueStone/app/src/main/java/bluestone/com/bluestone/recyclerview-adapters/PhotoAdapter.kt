@@ -52,17 +52,43 @@ class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>() {
         notifyItemInserted(itemList.size - 1)
     }
 
+    fun removeFirstNItems(newItems: List<ItemDetail>) {
+        for (  i in 0 until newItems.size)
+            if (i < itemList.size)
+                itemList.removeAt(i)
+            else
+                break
+
+        itemList.addAll(itemList.size, newItems)
+        notifyItemRangeRemoved(0, newItems.size-1)
+    }
+
+    fun removeLastNItems(newItems:List<ItemDetail>) {
+        val start = itemList.size - newItems.size
+        if (start < 0)
+            return
+        for (i in start until itemList.size)
+            itemList.removeAt(i)
+        itemList.addAll(itemList.size, newItems)
+    }
+
     fun update(newItems: List<ItemDetail>) {
         itemList.clear()
         itemList.addAll(newItems)
         notifyDataSetChanged()
     }
-
+    fun update(){
+        notifyDataSetChanged()
+    }
     fun getItemDetailByPosition(index: Int): ItemDetail {
         return itemList[index]
     }
 
     fun getAllItems(): List<ItemDetail> {
         return itemList.toMutableList()
+    }
+    companion object {
+        val maxAdapterSize = 15
+        val maxPageSize = 5
     }
 }

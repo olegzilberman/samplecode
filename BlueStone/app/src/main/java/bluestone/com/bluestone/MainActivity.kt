@@ -1,6 +1,5 @@
 package bluestone.com.bluestone
 
-import android.content.Intent
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
@@ -15,10 +14,13 @@ import bluestone.com.bluestone.`data-model`.FragmentCreationDescriptor
 import bluestone.com.bluestone.fragments.PhotoFragment
 import bluestone.com.bluestone.fragments.RecyclerViewFragment
 import bluestone.com.bluestone.interfaces.FragmentCreationInterface
+import bluestone.com.bluestone.utilities.printLog
 import io.reactivex.disposables.Disposables
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
+
 
 
 private var fragmentCallback  = PublishSubject.create<FragmentCreationDescriptor>()

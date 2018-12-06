@@ -15,7 +15,6 @@ import bluestone.com.bluestone.`cache-manager`.CacheManager
 import bluestone.com.bluestone.`data-model`.DisplayedPageState
 import bluestone.com.bluestone.`data-model`.FragmentCreationDescriptor
 import bluestone.com.bluestone.`item-detail`.ItemDetail
-import bluestone.com.bluestone.`item-detail`.ItemDetailListDescriptor
 import bluestone.com.bluestone.`recyclerview-adapters`.PhotoAdapter
 import bluestone.com.bluestone.`touch-handlers`.RecyclerItemClickListenr
 import bluestone.com.bluestone.`touch-handlers`.RecyclerViewScrollHandler
@@ -26,6 +25,7 @@ import bluestone.com.bluestone.utilities.printLog
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
@@ -33,11 +33,9 @@ import io.reactivex.subjects.PublishSubject
 class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var mAdapter: PhotoAdapter
-    private val maxServerFetch = 5
     private var serverCall = NetworkService("https://pixabay.com/api/")
     private var savedStatePresent = false
     private val disposables = CompositeDisposable()
-    private val recyclerViewDataKey = "recyclerviewfragment"
     private lateinit var pageLoader: DisplayedPageStateLoader
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,14 +65,15 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
     override fun onResume() {
         super.onResume()
         printLog("RecyclerViewFragment.onResume")
-        disposables.add(
-            populateAdapterFromSavedState()
+            var disposable = populateAdapterFromSavedState()!!
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribeWith(object : DisposableSingleObserver<DisplayedPageState>() {
                     override fun onSuccess(itemDetails: DisplayedPageState) {
                         mAdapter.update(itemDetails.items)
                         mRecyclerView.layoutManager?.scrollToPosition(itemDetails.firstVisible)
+                        mAdapter.update()
+                        printLog("initial count = ${mAdapter.itemCount}")
                     }
 
                     override fun onError(e: Throwable) {
@@ -83,7 +82,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
                     }
 
                 })
-        )
+            disposables.add(disposable)
     }
 
     override fun onStop() {
@@ -120,7 +119,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
         }
     }
 
-    private fun populateAdapterFromSavedState(): Single<DisplayedPageState> {
+    private fun populateAdapterFromSavedState(): Single<DisplayedPageState>? {
         val loader = DisplayedPageStateLoader(CacheManager)
         val items = loader.get()
         return if (items != null)
@@ -130,7 +129,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
 
     }
 
-    private fun savedStateReader(): Single<DisplayedPageState> =
+    private fun savedStateReader(): Single<DisplayedPageState>? =
         Single.create<DisplayedPageState> { emitter ->
             val items = DisplayedPageStateLoader(CacheManager)
             items.get()?.let { itemListDescriptor ->
@@ -139,15 +138,17 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
         }
 
 
-    private fun fetchServerDataAsSingle(): Single<DisplayedPageState> {
-        return serverCall.getApi()!!.fetchAll(maxServerFetch)
-            .flatMap { data ->
-                val itemList = mutableListOf<ItemDetail>()
-                for (item in data.hits) {
-                    itemList.add(ItemDetail(item.tags, item.largeImageURL, item.likes, item.user))
+    private fun fetchServerDataAsSingle(): Single<DisplayedPageState>? {
+        return serverCall.getApi()?.run {
+            fetchAll(PhotoAdapter.maxAdapterSize)
+                .flatMap { data ->
+                    val itemList = mutableListOf<ItemDetail>()
+                    for (item in data.hits) {
+                        itemList.add(ItemDetail(item.tags, item.largeImageURL, item.likes, item.user))
+                    }
+                    Single.just(DisplayedPageState(1, 0, itemList))
                 }
-                Single.just(DisplayedPageState(1, 0, itemList))
-            }
+        }
     }
 
     private fun displayDetailPhoto(url: String) {

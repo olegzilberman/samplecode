@@ -72,7 +72,7 @@ object CacheManager {
     }
 
     @UseExperimental(ImplicitReflectionSerializer::class)
-    fun getItem(key:String) : Any? {
+    fun getItem(key:String) : Array<String>? {
         if (database.exists(key)){
             return JSON.unquoted.parse(database.get(key))
         }
@@ -80,9 +80,8 @@ object CacheManager {
     }
 
     @UseExperimental(ImplicitReflectionSerializer::class)
-    fun putItem(key: String, item: Any) {
-        val data = JSON.unquoted.stringify(item)
-        database.put(key, data)
+    fun putItem(key:String, item:Array<String>) {
+        database.put(key, item)
     }
 
     fun deleteKey(key: String) = try {
