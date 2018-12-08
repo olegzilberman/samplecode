@@ -1,5 +1,6 @@
 package bluestone.com.bluestone
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
@@ -14,16 +15,13 @@ import bluestone.com.bluestone.`data-model`.FragmentCreationDescriptor
 import bluestone.com.bluestone.fragments.PhotoFragment
 import bluestone.com.bluestone.fragments.RecyclerViewFragment
 import bluestone.com.bluestone.interfaces.FragmentCreationInterface
-import bluestone.com.bluestone.utilities.printLog
 import io.reactivex.disposables.Disposables
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_main.*
-import android.content.Intent
 
 
-
-private var fragmentCallback  = PublishSubject.create<FragmentCreationDescriptor>()
+private var fragmentCallback = PublishSubject.create<FragmentCreationDescriptor>()
 
 class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionListener {
 
@@ -44,11 +42,12 @@ class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionLis
     override fun onConfigurationChanged(newConfig: Configuration?) {
         super.onConfigurationChanged(newConfig)
     }
+
     private fun cleanDB() {
         CacheManager.deleteDB()
     }
 
-    private fun initFragmentCallback(){
+    private fun initFragmentCallback() {
         firstFragment = RecyclerViewFragment.newInstance(fragmentCallback)
         displayNextFragment(firstFragment.fragment())
     }
@@ -74,6 +73,7 @@ class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionLis
             }
         })
     }
+
     override fun onStop() {
         super.onStop()
         disposable.dispose()
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity(), PhotoFragment.OnFragmentInteractionLis
                 cleanDB()
                 val intent = baseContext.packageManager
                     .getLaunchIntentForPackage(baseContext.packageName)
-                intent?.run{
+                intent?.run {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     startActivity(intent)
                 }

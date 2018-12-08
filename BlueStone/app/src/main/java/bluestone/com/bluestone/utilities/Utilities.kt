@@ -15,7 +15,8 @@ import android.widget.ImageView
 
 const val TAG = "RVF_VIEW"
 fun printLog(msg: String) {
-    Log.i(TAG, "=-=-=-=-=-=-= $msg")
+    if (Log.isLoggable(TAG, Log.DEBUG))
+        Log.d(TAG, "=-=-=-=-=-=-= $msg")
 }
 
 fun scaleImage(image: ImageView, scale: Float, targetImageView: ImageView, reset: Boolean) {
@@ -26,8 +27,9 @@ fun scaleImage(image: ImageView, scale: Float, targetImageView: ImageView, reset
     }
 
     val sourceBMP = (image.drawable as BitmapDrawable).bitmap
-    val targetBMP = Bitmap.createScaledBitmap(sourceBMP, (sourceBMP.width.toFloat() * scale).toInt(), (sourceBMP.height.toFloat() * scale).toInt(), true);
-    targetImageView.setImageBitmap(targetBMP)
+    targetImageView.setImageBitmap(sourceBMP)
+    targetImageView.scaleX = scale
+    targetImageView.scaleY = 1.5f
 }
 
 fun zoomImageFromThumb(

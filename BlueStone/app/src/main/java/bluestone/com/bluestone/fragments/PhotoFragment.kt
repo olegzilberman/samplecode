@@ -1,17 +1,21 @@
 package bluestone.com.bluestone.fragments
 
 import android.content.Context
+import android.graphics.BitmapFactory
+import android.graphics.Matrix
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.ImageView
 import bluestone.com.bluestone.R
 import bluestone.com.bluestone.`cache-manager`.CacheManager
-import bluestone.com.bluestone.utilities.*
+import bluestone.com.bluestone.utilities.ImmageController
+import bluestone.com.bluestone.utilities.printLog
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 
 
@@ -31,9 +35,9 @@ class PhotoFragment : Fragment() {
     private var photoUrl: String? = null
     private var listener: OnFragmentInteractionListener? = null
     private val photofragmentkey = "photofragmentkey"
-    private var zoomScale = 1.0f
-    private lateinit var mainView:View
-    private var shortAnimationDuration:Int = 0
+    private lateinit var mainView: View
+    private var shortAnimationDuration: Int = 0
+    private lateinit var targetImage:ImmageController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,12 +54,27 @@ class PhotoFragment : Fragment() {
         mainView = inflater.inflate(R.layout.fragment_photo, container, false)
         shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
         initListeners(mainView)
+        val targetView = mainView.findViewById<ImageView>(R.id.fragment_image)
         Picasso.get()
             .load(photoUrl)
             .noPlaceholder()
             .fit()
             .centerInside()
-            .into(mainView.findViewById<ImageView>(R.id.fragment_image))
+            .into(targetView, object : Callback {
+                override fun onSuccess() {
+                    val tempBMP = targetView.getDrawable() as BitmapDrawable
+                    targetImage=mainView.findViewById(R.id.expanded_image)
+                    targetView.visibility=View.GONE
+                    targetImage.visibility=View.VISIBLE
+                    targetImage.setBitmap(tempBMP.bitmap, targetView.imageMatrix)
+                }
+                override fun onError(e: Exception?) {
+                    e?.let {
+                        printLog(it.localizedMessage)
+                    }
+                }
+            }
+            )
         return mainView
     }
 
@@ -71,23 +90,31 @@ class PhotoFragment : Fragment() {
         }
     }
 
-    private fun initListeners(targetView:View){
-        targetView.setOnClickListener {thisView ->
-            var reset = false
-            if (zoomScale != 1.0f) {
-                reset = true
-                mainView.findViewById<ImageView>(R.id.fragment_image)?.visibility = View.VISIBLE
-                mainView.findViewById<ImageView>(R.id.expanded_image)?.visibility = View.GONE
-                zoomScale = 1.0F
-            }
-            else {
-                zoomScale *= 3f
-                mainView.findViewById<ImageView>(R.id.fragment_image)?.visibility = View.GONE
-                mainView.findViewById<ImageView>(R.id.expanded_image)?.visibility = View.VISIBLE
-            }
-            scaleImage(mainView.findViewById(R.id.fragment_image), zoomScale, mainView.findViewById<ImageView>(R.id.expanded_image), reset)
-        }
+    private fun initListeners(targetView: View) {
+//        gestures = GestureDetector(context, GestureListener(mainView))
+//        mainView.setOnTouchListener(object:View.OnTouchListener{
+//            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+//                return gestures.onTouchEvent(event)
+//            }
+//        })
+//        targetView.setOnClickListener {thisView ->
+//            var reset = false
+//            if (zoomScale > 5.0f) {
+//                reset = true
+//                mainView.findViewById<ImageView>(R.id.fragment_image)?.visibility = View.VISIBLE
+//                mainView.findViewById<ImageView>(R.id.expanded_image)?.visibility = View.GONE
+//                zoomScale = 1.0F
+//            }
+//            else {
+//                zoomScale *= 1.1f
+//                mainView.findViewById<ImageView>(R.id.fragment_image)?.visibility = View.GONE
+//                mainView.findViewById<ImageView>(R.id.expanded_image)?.visibility = View.VISIBLE
+//            }
+//
+//            scaleImage(mainView.findViewById(R.id.fragment_image), zoomScale, mainView.findViewById<ImageView>(R.id.expanded_image), reset)
+//        }
     }
+
     fun onButtonPressed(uri: Uri) {
     }
 

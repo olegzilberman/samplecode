@@ -37,6 +37,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
     private var savedStatePresent = false
     private val disposables = CompositeDisposable()
     private lateinit var pageLoader: DisplayedPageStateLoader
+    private var nextPage = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,8 +86,9 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
             disposables.add(disposable)
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onPause(){
+        super.onPause()
+        saveAdapterState()
         disposables.clear()
     }
 
@@ -100,10 +102,6 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
         super.onSaveInstanceState(outState)
         saveAdapterState()
         printLog("onSaveInstanceState")
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration?) {
-        super.onConfigurationChanged(newConfig)
     }
 
     private fun saveAdapterState() {
@@ -124,8 +122,9 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
         val items = loader.get()
         return if (items != null)
             savedStateReader()
-        else
+        else {
             fetchServerDataAsSingle()
+        }
 
     }
 
@@ -137,9 +136,9 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
             }
         }
 
-
     private fun fetchServerDataAsSingle(): Single<DisplayedPageState>? {
         return serverCall.getApi()?.run {
+            nextPage = PhotoAdapter.maxAdapterSize/PhotoAdapter.maxPageSize
             fetchAll(PhotoAdapter.maxAdapterSize)
                 .flatMap { data ->
                     val itemList = mutableListOf<ItemDetail>()
@@ -171,7 +170,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
                         context,
                         mAdapter,
                         serverCall,
-                        pageLoader
+                        nextPage
                     )
                 )
 

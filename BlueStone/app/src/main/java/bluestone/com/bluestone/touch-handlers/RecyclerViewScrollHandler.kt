@@ -8,7 +8,6 @@ import android.widget.Toast
 import bluestone.com.bluestone.`data-model`.PhotoDataModel
 import bluestone.com.bluestone.`item-detail`.ItemDetail
 import bluestone.com.bluestone.`recyclerview-adapters`.PhotoAdapter
-import bluestone.com.bluestone.data_model_loader.DisplayedPageStateLoader
 import bluestone.com.bluestone.server.NetworkService
 import bluestone.com.bluestone.utilities.printLog
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -20,33 +19,35 @@ class RecyclerViewScrollHandler(
     private val context: Context,
     private val adapter: PhotoAdapter,
     private val serverCall: NetworkService,
-    private val pageStateLoader: DisplayedPageStateLoader
-) : RecyclerView.OnScrollListener() {
-    private val topPageBuffer: ArrayList<ItemDetail> = arrayListOf<ItemDetail>()
+    private var nextPage : Int
+    ) : RecyclerView.OnScrollListener() {
     private var disposable = Disposables.disposed()
     private var scrollAccumulator = 0
-    private var nextPage = 1
-    private var prevPage = 1
-    private var scrollDirection = 0
+    private var prevPage = nextPage
+
+    private enum class ScrollDirection { SCROLL_DOWN, SCROLL_UP, IDLE }
+
+    private var scrollDirection = ScrollDirection.IDLE
     override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
         super.onScrolled(recyclerView, dx, dy)
-        if (dy < 0)
-            scrollDirection = -1
-        else
-            scrollDirection = 1
+        scrollDirection = when {
+            dy < 0 -> ScrollDirection.SCROLL_DOWN
+            dy > 0 -> ScrollDirection.SCROLL_UP
+            else -> ScrollDirection.IDLE
+        }
     }
 
-    private fun advancePageCounter(page: Int, first: Int, last: Int, delta:Int): Int {
+    private fun advancePageCounter(page: Int, first: Int, last: Int, direction: ScrollDirection): Int {
         var nextPage = page
-        when {
-            delta < 0 ->
-                if (last >= PhotoAdapter.maxAdapterSize - 1) {
-                    ++nextPage
+        when (direction) {
+            ScrollDirection.SCROLL_DOWN ->
+                if (first == 0 && nextPage > 1) {
+                    --nextPage
                     printLog("scrollAccumulator = $scrollAccumulator SCROLLING DOWN first = $first nextPage = $nextPage")
                 }
-            delta > 0 ->
-                if (first == 0 && nextPage > 0) {
-                    --nextPage
+            ScrollDirection.SCROLL_UP ->
+                if (last >= PhotoAdapter.maxAdapterSize - 1) {
+                    ++nextPage
                     printLog("scrollAccumulator = $scrollAccumulator SCROLLING UP first = $first nextPage = $nextPage")
                 }
             else ->
@@ -78,13 +79,12 @@ class RecyclerViewScrollHandler(
                         for (item in data.hits) {
                             itemList.add(ItemDetail(item.tags, item.largeImageURL, item.likes, item.user))
                         }
-                        topPageBuffer.addAll(adapter.getAllItems())
-                        if (adapter.itemCount < PhotoAdapter.maxAdapterSize) {
-                            adapter.updateEndOfList(itemList)
-                        } else if (scrollDirection < 0){
-                            adapter.removeFirstNItems(itemList)
-                        } else if (scrollDirection > 0){
-                            adapter.removeLastNItems(itemList)
+                        when (scrollDirection) {
+                            ScrollDirection.SCROLL_UP -> if (last == PhotoAdapter.maxAdapterSize - 1) adapter.removeFirstNItems(
+                                itemList
+                            )
+                            ScrollDirection.SCROLL_DOWN -> if (first == 0) adapter.removeLastNItems(itemList)
+                            else -> printLog("no need to update paging")
                         }
                     }
 

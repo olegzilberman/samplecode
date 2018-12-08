@@ -45,13 +45,6 @@ class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>() {
         return itemList.size
     }
 
-    //TODO:OZ as written, the itemList will grow unbounded. Need to add code that maintains a forward and backword fetch buffer
-    //that is updated via notify notifyDataSetRange inserted/removed.
-    fun updateEndOfList(newItems: List<ItemDetail>) {
-        itemList.addAll(newItems)
-        notifyItemInserted(itemList.size - 1)
-    }
-
     fun removeFirstNItems(newItems: List<ItemDetail>) {
         for (  i in 0 until newItems.size)
             if (i < itemList.size)
@@ -60,16 +53,18 @@ class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>() {
                 break
 
         itemList.addAll(itemList.size, newItems)
-        notifyItemRangeRemoved(0, newItems.size-1)
+        notifyItemRangeRemoved(0, newItems.size)
     }
 
     fun removeLastNItems(newItems:List<ItemDetail>) {
         val start = itemList.size - newItems.size
         if (start < 0)
             return
-        for (i in start until itemList.size)
-            itemList.removeAt(i)
-        itemList.addAll(itemList.size, newItems)
+        val originalSize = itemList.size
+        for (i in start until originalSize)
+            itemList.removeAt(itemList.size-1)
+        itemList.addAll(0, newItems)
+        notifyItemRangeInserted(0, newItems.size)
     }
 
     fun update(newItems: List<ItemDetail>) {
