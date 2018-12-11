@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.widget.AbsListView
 import android.widget.Toast
 import bluestone.com.bluestone.`data-model`.PhotoDataModel
+import bluestone.com.bluestone.`data-model`.PixabayKey
 import bluestone.com.bluestone.`item-detail`.ItemDetail
 import bluestone.com.bluestone.`recyclerview-adapters`.PhotoAdapter
 import bluestone.com.bluestone.server.NetworkService
@@ -70,7 +71,7 @@ class RecyclerViewScrollHandler(
         serverCall.getApi()?.run {
             disposable.dispose()
             printLog("Count before scroll ${adapter.itemCount}")
-            disposable = fetchNextPage(nextPage, PhotoAdapter.maxPageSize)
+            disposable = fetchTest(PixabayKey, nextPage, PhotoAdapter.maxPageSize)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribeWith(object : DisposableObserver<PhotoDataModel>() {

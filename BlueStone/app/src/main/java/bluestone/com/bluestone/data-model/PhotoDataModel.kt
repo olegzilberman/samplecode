@@ -1,6 +1,5 @@
 package bluestone.com.bluestone.`data-model`
 import com.google.gson.annotations.SerializedName
-
 class PhotoData(
     @SerializedName("pageURL") val pageURL : String,
     @SerializedName("previewURL") val previewURL : String,

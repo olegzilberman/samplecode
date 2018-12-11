@@ -30,6 +30,7 @@ import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 
+private const val PIXABAY_INITIAL_DATA = "param1"
 class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var mAdapter: PhotoAdapter
@@ -62,6 +63,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
 
     override fun callbackSubject() = RecyclerViewFragment.fragmentSubject
     override fun fragment() = this
+    override fun getFragmentId() = RecyclerViewFragment.fragmentID
 
     override fun onResume() {
         super.onResume()
@@ -152,7 +154,7 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
 
     private fun displayDetailPhoto(url: String) {
         val photoView = PhotoFragment.newInstance(url)
-        RecyclerViewFragment.fragmentSubject.onNext(FragmentCreationDescriptor(photoView, 0, "nothing"))
+        RecyclerViewFragment.fragmentSubject.onNext(FragmentCreationDescriptor(photoView, PhotoFragment.fragmentID))
     }
 
     private fun initializeRecycler(view: View, pageLoader: DisplayedPageStateLoader) {
@@ -200,9 +202,15 @@ class RecyclerViewFragment : Fragment(), FragmentCreationInterface {
         const val fragmentID = "5a5e870f-01db-4e44-977e-0212501177a5"
         private lateinit var fragmentSubject: PublishSubject<FragmentCreationDescriptor>
         @JvmStatic
-        fun newInstance(subject: PublishSubject<FragmentCreationDescriptor>): FragmentCreationInterface {
-            RecyclerViewFragment.fragmentSubject = subject
-            return RecyclerViewFragment()
+        fun newInstance(subject: PublishSubject<FragmentCreationDescriptor>, initialData: String?) :FragmentCreationInterface{
+            fragmentSubject = subject
+            return RecyclerViewFragment().apply {
+                arguments = Bundle().apply {
+                    initialData?.apply {
+                        putString(PIXABAY_INITIAL_DATA, this)
+                    }
+                }
+            }
         }
     }
 }

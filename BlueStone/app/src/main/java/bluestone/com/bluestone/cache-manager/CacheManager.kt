@@ -34,12 +34,16 @@ object CacheManager {
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun putItemList(key: String, items: ItemDetailListDescriptor) {
+        if (!database.isOpen)
+            return
         val data = JSON.unquoted.stringify(items)
         database.put(key, data)
     }
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun getItemList(key: String): ItemDetailListDescriptor? {
+        if (!database.isOpen)
+            return null
         if (database.exists(key)) {
             return JSON.unquoted.parse(database.get(key))
         }
@@ -48,12 +52,16 @@ object CacheManager {
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun putDisplayedPageState(key:String, item: DisplayedPageState) {
+        if (!database.isOpen)
+            return
         val data = JSON.unquoted.stringify(item)
         database.put(key, data)
     }
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun getDisplayedPageState(key:String) : DisplayedPageState?{
+        if (!database.isOpen)
+            return null
         if (database.exists(key))
             return JSON.unquoted.parse(database.get(key))
         return null
@@ -61,11 +69,15 @@ object CacheManager {
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun putString(key:String, value:String) {
+        if (!database.isOpen)
+            return
         database.put(key, value)
     }
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun getString(key:String) : String? {
+        if (!database.isOpen)
+            return null
         if (!database.exists(key))
             return null
         return database.get(key)
@@ -73,6 +85,8 @@ object CacheManager {
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun getItem(key:String) : Array<String>? {
+        if (!database.isOpen)
+            return null
         if (database.exists(key)){
             return JSON.unquoted.parse(database.get(key))
         }
@@ -81,6 +95,8 @@ object CacheManager {
 
     @UseExperimental(ImplicitReflectionSerializer::class)
     fun putItem(key:String, item:Array<String>) {
+        if (!database.isOpen)
+            return
         database.put(key, item)
     }
 
@@ -91,7 +107,7 @@ object CacheManager {
     }
 
     fun deleteDB() {
-        if(!database.isOpen)
+        if (!database.isOpen)
             return
         database.destroy()
     }

@@ -17,4 +17,7 @@ interface NetworkApi {
 
     @GET("?key=10583771-d9cdc2ef7dce85b4c6299413f&editors_choice=1")
     fun fetchNextPage(@Query("page") page:Int, @Query("per_page") per_page:Int) : Observable<PhotoDataModel>
+
+    @GET()
+    fun fetchTest(@Query("key") key:String, @Query("page") page:Int, @Query("per_page") per_page: Int) : Observable<PhotoDataModel>
 }

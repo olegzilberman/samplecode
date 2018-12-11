@@ -5,6 +5,7 @@ import bluestone.com.bluestone.`data-model`.FragmentCreationDescriptor
 import io.reactivex.subjects.PublishSubject
 
 interface FragmentCreationInterface {
-    fun callbackSubject() : PublishSubject<FragmentCreationDescriptor>
-    fun fragment() : Fragment
+    fun callbackSubject(): PublishSubject<FragmentCreationDescriptor>
+    fun fragment(): Fragment
+    fun getFragmentId(): String
 }
